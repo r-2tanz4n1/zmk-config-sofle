@@ -26,11 +26,11 @@
 &kp TAB       &kp Q   &kp W       &kp E           &kp R               &kp T                                           &kp Y                &kp U     &kp I       &kp O                        &kp P                   &kp RIGHT_BRACKET
 &kp LEFT_ALT  &kp A   &kp S       &kp D           &kp F               &kp G                                           &kp H                &kp J     &kp K       &kp L                        &mt LEFT_ALT SEMICOLON  &kp SQT
 &kp LSHFT     &kp Z   &kp X       &kp C           &kp V               &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                      &kp FSLH                &mt RSHFT ENTER
-                  &caps_word  &mt LCTRL LEFT  &mt LEFT_ALT RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt LC(LS(LA(RALT))) DELETE
+                      &caps_word  &mt LCTRL LEFT  &mt LEFT_ALT RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt LC(LS(LA(RALT))) DELETE
             >;
 
             sensor-bindings =
-                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp UP DOWN>,
                 <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
