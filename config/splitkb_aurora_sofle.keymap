@@ -49,6 +49,10 @@
 &kp LSHFT  &kp LS(NUMBER_3)  &kp F2             &kp F4         &kp INT1      &kp LS(GRAVE)  &trans    &trans  &kp N0        &kp N1        &kp N2     &kp N3   &kp FSLH       &kp RET
                              &kp LS(LA(LC(Q)))  &kp LCTRL      &kp LALT      &trans         &trans    &trans  &kp TAB       &kp LS(RPAR)  &kp COMMA  &kp DOT
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp LA(UP) RA(DOWN)>,
+                <&inc_dec_kp LA(RIGHT) LA(LEFT)>;
         };
 
         NAV {
@@ -60,11 +64,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp ESC    &kp F11     &kp F12              &none      &trans    &trans                                        &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
-&kp TAB    &none       &mkp MB1             &none      &mkp MB2  &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
-&kp LALT   &kp INT_RO  &none                &none      &none     &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
-&kp LSHFT  &kp INT1    &kp INTERNATIONAL_2  &kp INT3   &kp INT4  &kp INT5        &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &kp RSHFT
-                       &trans               &kp LCTRL  &kp LALT  &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
+&kp INT3   &kp F11  &kp F12   &none      &trans    &trans                                        &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
+&kp TAB    &none    &mkp MB1  &none      &mkp MB2  &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
+&kp LALT   &none    &none     &none      &none     &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
+&kp LSHFT  &none    &none     &none      &none     &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &kp RSHFT
+                    &trans    &kp LCTRL  &kp LALT  &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(DOWN)) LS(LA(UP))>;
