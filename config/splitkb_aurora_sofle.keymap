@@ -10,6 +10,62 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    behaviors {
+        td_CL: td_CL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CL";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_c: td_c {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_C";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LG(C)>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_v: td_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_V";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LG(V)>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_s: td_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_S";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp LA(N2)>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_d: td_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_D";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp LA(N3)>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_w: td_w {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_W";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LG(W)>;
+
+            tapping-term-ms = <160>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,11 +78,11 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp ESC        &kp N1  &kp N2      &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8      &kp N9                       &kp N0                  &kp MINUS
-&mt LCTRL TAB  &kp Q   &kp W       &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I       &kp O                        &kp P                   &kp RIGHT_BRACKET
-&kp LEFT_ALT   &kp A   &kp S       &kp D              &kp F        &kp G                                           &kp H                &kp J     &kp K       &kp L                        &mt LEFT_ALT SEMICOLON  &kp SQT
-&kp LSHFT      &kp Z   &kp X       &kp C              &kp V        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                      &kp FSLH                &mt RSHFT ENTER
-                       &caps_word  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt LC(LS(LA(RALT))) DELETE
+&kp ESC        &kp N1  &kp N2                      &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8      &kp N9                    &kp N0                  &kp MINUS
+&mt LCTRL TAB  &kp Q   &td_w                       &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I       &kp O                     &kp P                   &kp RIGHT_BRACKET
+&kp LEFT_ALT   &kp A   &td_s                       &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K       &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
+&td_CL         &kp Z   &kp X                       &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                   &kp FSLH                &mt RSHFT ENTER
+                       &mt LA(LC(LEFT_SHIFT)) DEL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
             >;
 
             sensor-bindings =
