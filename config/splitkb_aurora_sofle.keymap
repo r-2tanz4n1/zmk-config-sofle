@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
+&mt {
+    tapping-term-ms = <160>;
+    quick-tap-ms = <1>;
+};
+
 / {
     behaviors {
         td_c: td_c {
@@ -64,6 +69,24 @@
 
             tapping-term-ms = <160>;
         };
+
+        td_commacopy: td_commacopy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMACOPY";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LG(C)>;
+
+            tapping-term-ms = <160>;
+        };
+
+        td_dotpaste: td_dotpaste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOTPASTE";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp LG(V)>;
+
+            tapping-term-ms = <160>;
+        };
     };
 
     keymap {
@@ -78,11 +101,11 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp ESC        &kp N1  &td_F2                      &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8      &kp N9                    &kp N0                  &kp MINUS
-&mt LCTRL TAB  &kp Q   &kp W                       &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I       &kp O                     &kp P                   &kp RIGHT_BRACKET
-&kp LEFT_ALT   &kp A   &td_s                       &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K       &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
-&td_ShftCW     &kp Z   &kp X                       &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                   &kp FSLH                &mt RSHFT ENTER
-                       &mt LS(LC(LEFT_ALT)) EQUAL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
+&kp ESC        &kp N1  &td_F2                      &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8         &kp N9                    &kp N0                  &kp MINUS
+&mt LCTRL TAB  &kp Q   &kp W                       &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I          &kp O                     &kp P                   &kp RIGHT_BRACKET
+&kp LEFT_ALT   &kp A   &td_s                       &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K          &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
+&td_ShftCW     &kp Z   &kp X                       &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &td_commacopy  &td_dotpaste              &kp FSLH                &mt RSHFT ENTER
+                       &mt LS(LC(LEFT_ALT)) EQUAL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN     &mt RS(RA(RCTRL)) DELETE
             >;
 
             sensor-bindings =
