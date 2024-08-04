@@ -22,7 +22,7 @@
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LG(C)>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_v: td_v {
@@ -31,7 +31,7 @@
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LG(V)>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_s: td_s {
@@ -40,7 +40,7 @@
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp LA(N2)>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_d: td_d {
@@ -49,7 +49,7 @@
             #binding-cells = <0>;
             bindings = <&kp D>, <&kp LA(N3)>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_F2: td_F2 {
@@ -58,7 +58,7 @@
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_ShftCW: td_ShftCW {
@@ -67,7 +67,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
 
         td_commacopy: td_commacopy {
@@ -76,7 +76,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp LG(C)>;
 
-            tapping-term-ms = <160>;
+            tapping-term-ms = <140>;
         };
 
         td_dotpaste: td_dotpaste {
@@ -85,7 +85,7 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp LG(V)>;
 
-            tapping-term-ms = <100>;
+            tapping-term-ms = <140>;
         };
     };
 
