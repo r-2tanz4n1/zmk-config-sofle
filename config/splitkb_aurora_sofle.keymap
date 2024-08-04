@@ -78,11 +78,11 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp ESC        &kp N1  &td_F2                         &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8      &kp N9                    &kp N0                  &kp MINUS
-&mt LCTRL TAB  &kp Q   &kp W                          &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I       &kp O                     &kp P                   &kp RIGHT_BRACKET
-&kp LEFT_ALT   &kp A   &td_s                          &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K       &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
-&td_ShftCW     &kp Z   &kp X                          &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                   &kp FSLH                &mt RSHFT ENTER
-                       &mt LS(LC(LEFT_ALT)) CAPSLOCK  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
+&kp ESC        &kp N1  &td_F2                          &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8      &kp N9                    &kp N0                  &kp MINUS
+&mt LCTRL TAB  &kp Q   &kp W                           &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I       &kp O                     &kp P                   &kp RIGHT_BRACKET
+&kp LEFT_ALT   &kp A   &td_s                           &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K       &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
+&td_ShftCW     &kp Z   &kp X                           &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &kp COMMA   &kp DOT                   &kp FSLH                &mt RSHFT ENTER
+                       &mt LS(LC(LEFT_ALT)) LS(MINUS)  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
             >;
 
             sensor-bindings =
@@ -99,7 +99,7 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp ESC    &kp F1            &kp F2      &kp F3         &kp F4             &kp F5                           &kp F6        &kp F7        &kp F8     &kp F9   &kp F10        &kp MINUS
+&kp CAPS   &kp F1            &kp F2      &kp F3         &kp F4             &kp F5                           &kp F6        &kp F7        &kp F8     &kp F9   &kp F10        &kp MINUS
 &kp TAB    &kp LS(EXCL)      &kp LA(N0)  &kp LA(EQUAL)  &kp LS(STAR)       &kp LS(LPAR)                     &kp LS(AMPS)  &kp N7        &kp N8     &kp N9   &kp LS(PRCNT)  &kp LBKT
 &kp LALT   &kp LS(UNDER)     &kp LA(N2)  &kp LA(N3)     &kp LA(N8)         &kp LA(N9)                       &kp LS(PLUS)  &kp N4        &kp N5     &kp N6   &kp EQUAL      &kp BSLH
 &kp LSHFT  &kp LS(NUMBER_3)  &kp F2      &kp F4         &kp INT1           &kp LS(GRAVE)  &trans    &trans  &kp N0        &kp N1        &kp N2     &kp N3   &kp FSLH       &trans
@@ -120,11 +120,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp ESC    &kp F11     &kp F12    &none         &kp K_PREV  &kp K_NEXT                                    &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
-&kp TAB    &none       &mkp MB1   &none         &mkp MB2    &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
-&kp LALT   &none       &none      &none         &none       &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
-&kp LSHFT  &caps_word  &none      &mkp MB3      &none       &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &trans
-                       &kp LCTRL  &kp LEFT_ALT  &trans      &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
+&caps_word  &kp F11  &kp F12    &none         &kp K_PREV  &kp K_NEXT                                    &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
+&kp TAB     &none    &mkp MB1   &none         &mkp MB2    &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
+&kp LALT    &none    &none      &none         &none       &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
+&kp LSHFT   &none    &none      &mkp MB3      &none       &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &trans
+                     &kp LCTRL  &kp LEFT_ALT  &trans      &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
             >;
 
             sensor-bindings =
