@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+
 &mt {
     tapping-term-ms = <140>;
     quick-tap-ms = <1>;
@@ -67,7 +69,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
 
-            tapping-term-ms = <120>;
+            tapping-term-ms = <140>;
         };
 
         td_commacopy: td_commacopy {
@@ -87,6 +89,15 @@
 
             tapping-term-ms = <140>;
         };
+
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <185>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -101,10 +112,10 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp ESC        &kp N1  &td_F2                      &kp N3             &kp N4       &kp N5                                          &kp N6               &kp N7    &kp N8         &kp N9                    &kp N0                  &kp MINUS
-&mt LCTRL TAB  &kp Q   &kp W                       &kp E              &kp R        &kp T                                           &kp Y                &kp U     &kp I          &kp O                     &kp P                   &kp RIGHT_BRACKET
-&kp LEFT_ALT   &kp A   &td_s                       &td_d              &kp F        &kp G                                           &kp H                &kp J     &kp K          &kp L                     &mt LEFT_ALT SEMICOLON  &kp SQT
-&td_ShftCW     &kp Z   &kp X                       &td_c              &td_v        &kp B           &mkp MB3       &mkp MB4         &kp N                &kp M     &td_commacopy  &td_dotpaste              &kp FSLH                &mt RSHFT ENTER
+&kp ESC       AS(N1)  &td_F2      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
+&mt LCTRL TAB AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
+&kp LEFT_ALT  AS(A)   &td_s       &td_d           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
+&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &mkp MB4         AS(N)                AS(M)     AS(COMMA)   AS(DOT)                      AS(FSLH)                &mt RSHFT ENTER
                        &mt LS(LC(LEFT_ALT)) EQUAL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN     &mt RS(RA(RCTRL)) DELETE
             >;
 
