@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mt {
-    tapping-term-ms = <140>;
+    tapping-term-ms = <120>;
     quick-tap-ms = <1>;
 };
 
@@ -67,7 +67,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
 
-            tapping-term-ms = <140>;
+            tapping-term-ms = <120>;
         };
 
         td_commacopy: td_commacopy {
@@ -122,11 +122,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPS   &kp F1            &kp F2      &kp F3         &kp F4             &kp F5                           &kp F6        &kp F7        &kp F8     &kp F9   &kp F10        &kp MINUS
-&kp TAB    &kp LS(EXCL)      &kp LA(N0)  &kp LA(EQUAL)  &kp LS(STAR)       &kp LS(LPAR)                     &kp LS(AMPS)  &kp N7        &kp N8     &kp N9   &kp LS(PRCNT)  &kp LBKT
-&kp LALT   &kp LS(UNDER)     &kp LA(N2)  &kp LA(N3)     &kp LA(N8)         &kp LA(N9)                       &kp LS(PLUS)  &kp N4        &kp N5     &kp N6   &kp EQUAL      &kp BSLH
-&kp LSHFT  &kp LS(NUMBER_3)  &kp F2      &kp F4         &kp INT1           &kp LS(GRAVE)  &trans    &trans  &kp N0        &kp N1        &kp N2     &kp N3   &kp FSLH       &trans
-                             &kp LCTRL   &kp LEFT_ALT   &kp LA(LS(LC(Q)))  &trans         &trans    &trans  &kp TAB       &kp LS(RPAR)  &kp COMMA  &kp DOT
+&kp CAPS   &kp F1            &kp F2      &kp F3         &kp F4        &kp F5                           &kp F6        &kp F7        &kp F8     &kp F9   &kp F10        &kp MINUS
+&kp TAB    &kp LS(EXCL)      &kp LA(N0)  &kp LA(EQUAL)  &kp LS(STAR)  &kp LS(LPAR)                     &kp LS(AMPS)  &kp N7        &kp N8     &kp N9   &kp LS(PRCNT)  &kp LBKT
+&kp LALT   &kp LS(UNDER)     &kp LA(N2)  &kp LA(N3)     &kp LA(N8)    &kp LA(N9)                       &kp LS(PLUS)  &kp N4        &kp N5     &kp N6   &kp EQUAL      &kp BSLH
+&kp LSHFT  &kp LS(NUMBER_3)  &kp F2      &kp F4         &kp INT1      &kp LS(GRAVE)  &trans    &trans  &kp N0        &kp N1        &kp N2     &kp N3   &kp FSLH       &trans
+                             &kp LCTRL   &trans         &trans        &trans         &trans    &trans  &kp TAB       &kp LS(RPAR)  &kp COMMA  &kp DOT
             >;
 
             sensor-bindings =
@@ -143,11 +143,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11  &kp F12    &none         &kp K_PREV  &kp K_NEXT                                    &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
-&kp TAB     &none    &mkp MB1   &none         &mkp MB2    &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
-&kp LALT    &none    &none      &none         &none       &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
-&kp LSHFT   &none    &none      &mkp MB3      &none       &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &trans
-                     &kp LCTRL  &kp LEFT_ALT  &trans      &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
+&caps_word  &kp F11  &kp F12    &none     &kp K_PREV  &kp K_NEXT                                    &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
+&kp TAB     &none    &mkp MB1   &none     &mkp MB2    &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
+&kp LALT    &none    &none      &none     &none       &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
+&kp LSHFT   &none    &none      &mkp MB3  &none       &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &trans
+                     &kp LCTRL  &trans    &trans      &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
             >;
 
             sensor-bindings =
