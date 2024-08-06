@@ -18,41 +18,6 @@
 
 / {
     behaviors {
-        td_c: td_c {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_C";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LG(C)>;
-
-            tapping-term-ms = <140>;
-        };
-
-        td_v: td_v {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_V";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LG(V)>;
-
-            tapping-term-ms = <140>;
-        };
-
-        td_s: td_s {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_S";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&kp LA(N2)>;
-
-            tapping-term-ms = <140>;
-        };
-
-        td_d: td_d {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_D";
-            #binding-cells = <0>;
-            bindings = <&kp D>, <&kp LA(N3)>;
-
-            tapping-term-ms = <140>;
-        };
 
         td_F2: td_F2 {
             compatible = "zmk,behavior-tap-dance";
@@ -60,7 +25,7 @@
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
 
-            tapping-term-ms = <140>;
+            tapping-term-ms = <150>;
         };
 
         td_ShftCW: td_ShftCW {
@@ -69,25 +34,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
 
-            tapping-term-ms = <140>;
-        };
-
-        td_commacopy: td_commacopy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_COMMACOPY";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LG(C)>;
-
-            tapping-term-ms = <140>;
-        };
-
-        td_dotpaste: td_dotpaste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOTPASTE";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp LG(V)>;
-
-            tapping-term-ms = <140>;
+            tapping-term-ms = <160>;
         };
 
         as: auto_shift {
@@ -114,14 +61,14 @@
             bindings = <
 &kp ESC       AS(N1)  &td_F2      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &mt LCTRL TAB AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
-&kp LEFT_ALT  AS(A)   &td_s       &td_d           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
+&kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &mkp MB4         AS(N)                AS(M)     AS(COMMA)   AS(DOT)                      AS(FSLH)                &mt RSHFT ENTER
                        &mt LS(LC(LEFT_ALT)) EQUAL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN     &mt RS(RA(RCTRL)) DELETE
             >;
 
             sensor-bindings =
-                <&inc_dec_kp DOWN UP>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+                <&inc_dec_kp UP DOWN>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         NUM {
@@ -141,8 +88,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LA(DOWN) RA(UP)>,
-                <&inc_dec_kp LA(RIGHT) LA(LEFT)>;
+                <&inc_dec_kp LA(UP) RA(DOWN)>,
+                <&inc_dec_kp LA(LEFT) LA(RIGHT)>;
         };
 
         NAV {
@@ -162,8 +109,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LS(LA(DOWN)) LS(LA(UP))>,
-                <&inc_dec_kp RS(RA(RIGHT)) RS(RA(LEFT))>;
+                <&inc_dec_kp LS(LA(UP)) LS(LA(DOWN))>,
+                <&inc_dec_kp RS(RA(LEFT)) RS(RA(RIGHT))>;
         };
 
         SHORT-BT {
