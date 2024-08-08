@@ -25,7 +25,6 @@
             label = "TD_F2";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp F2>;
-
             tapping-term-ms = <150>;
         };
 
@@ -34,7 +33,6 @@
             label = "TD_SHFTCW";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
-
             tapping-term-ms = <160>;
         };
 
@@ -43,7 +41,8 @@
           label = "AUTOSHIFT_HOLD_TAP";
           #binding-cells = <2>;
           tapping-term-ms = <185>;
-          quick-tap-ms = <120>;
+          flavor = "balanced";
+          quick_tap_ms = <120>;
           bindings = <&shifted>, <&kp>;
         };
     };
