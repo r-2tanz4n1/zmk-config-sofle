@@ -12,8 +12,8 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 &mt {
-    tapping-term-ms = <150>;
-    quick-tap-ms = <135>;
+    tapping-term-ms = <140>;
+    quick-tap-ms = <110>;
 };
 
 
@@ -41,7 +41,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <185>;
+            tapping_term_ms = <175>;
             quick_tap_ms = <120>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
