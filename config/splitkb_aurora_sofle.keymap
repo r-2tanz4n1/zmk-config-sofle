@@ -87,7 +87,7 @@
 &kp TAB       &as Q   &as W                   &as E               &as R           &as T                                        &as Y        &as U          &as I       &as O                    &as P                   &as RIGHT_BRACKET
 &kp LEFT_ALT  &as A   &as S                   &as D               &as F           &as G                                        &as H        &as J          &as K       &as L                    &mt LEFT_ALT SEMICOLON  &as SQT
 &td_ShftCW    &as Z   &as X                   &as C               &as V           &as B        &none          &none            &as N        &as M          &as UP      &as COMMA                &as PERIOD              &mt RSHFT ENTER
-                      &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT SLASH  &mt LGUI EQUAL  &lt 1 SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &lt 2 SPACE  &mt RGUI LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
+                      &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT EQUAL  &mt LGUI SLASH  &lt 1 SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &lt 2 SPACE  &mt RGUI LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
             >;
 
             sensor-bindings =
@@ -127,9 +127,9 @@
             bindings = <
 &caps_word  &kp F11  &kp F12            &kp F13        &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19         &kp F20         &kp LA(BACKSPACE)
 &kp TAB     &none    &none              &kp C_BRI_MIN  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LG(LS(N3))    &kp LS(LG(N4))  &kp LG(LS(N5))  &kp BSPC
-&kp LALT    &none    &none              &kp K_MUTE     &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)    &none           &kp LA(DEL)
+&kp LALT    &none    &none              &kp K_MUTE     &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)    &kp LA(TAB)     &kp LA(DEL)
 &kp LSHFT   &none    &none              &kp C_PLAY     &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)             &kp RG(W)       &kp LG(C)         &kp LG(V)       &kp RG(Z)       &trans
-                     &kp RS(RA(RC(Q)))  &trans         &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp MINUS
+                     &kp RS(RA(RC(Q)))  &trans         &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &none
             >;
 
             sensor-bindings =
