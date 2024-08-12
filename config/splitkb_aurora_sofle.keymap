@@ -63,8 +63,8 @@
 &kp ESC       AS(N1)  &td_F2      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &mt LCTRL TAB AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
-&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &mkp MB4         AS(N)                AS(M)     AS(COMMA)   AS(DOT)                      AS(FSLH)                &mt RSHFT ENTER
-                       &mt LS(LC(LEFT_ALT)) EQUAL  &mt LEFT_ALT LEFT  &lt 2 RIGHT  &mt LCMD SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RIGHT_GUI SPACE  &lt 2 UP  &lt 3 DOWN     &mt RS(RA(RCTRL)) DELETE
+&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &mkp MB4         AS(N)                AS(M)     &kp UP     AS(COMMA)         AS(DOT)          &mt RSHFT ENTER
+                      &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT EQUAL  &mt LGUI SLASH  &lt 1 SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &lt 2 SPACE  &mt RGUI LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
             >;
 
             sensor-bindings =
@@ -81,11 +81,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPS   &kp F1            &kp F2      &kp F3         &kp F4        &kp F5                           &kp F6        &kp F7        &kp F8     &kp F9   &kp F10        &kp MINUS
-&kp TAB    &kp LS(EXCL)      &kp LA(N0)  &kp LA(EQUAL)  &kp LS(STAR)  &kp LS(LPAR)                     &kp LS(AMPS)  &kp N7        &kp N8     &kp N9   &kp LS(PRCNT)  &kp LBKT
-&kp LALT   &kp LS(UNDER)     &kp LA(N2)  &kp LA(N3)     &kp LA(N8)    &kp LA(N9)                       &kp LS(PLUS)  &kp N4        &kp N5     &kp N6   &kp EQUAL      &kp BSLH
-&kp LSHFT  &kp LS(NUMBER_3)  &kp F2      &kp F4         &kp INT1      &kp LS(GRAVE)  &trans    &trans  &kp N0        &kp N1        &kp N2     &kp N3   &kp FSLH       &trans
-                             &kp LCTRL   &trans         &trans        &trans         &trans    &trans  &kp TAB       &kp LS(RPAR)  &kp COMMA  &kp DOT
+&kp CAPS   &kp F1         &kp F2      &kp F3                &kp F4        &kp F5                                     &kp F6         &kp F7      &kp F8      &kp F9     &kp F10     &kp BACKSPACE
+&kp TAB    &kp LA(EQUAL)  &kp LS(N5)  &kp LS(N3)            &kp LS(N8)    &kp LS(N9)                                 &kp LS(N7)     &kp N7      &kp N8      &kp N9     &kp LA(N0)  &kp DEL
+&kp LALT   &none          &kp LA(N2)  &kp LA(N3)            &kp LA(N8)    &kp LA(N9)                                 &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6     &kp EQUAL   &none
+&kp LSHFT  &none          &kp F2      &kp NON_US_BACKSLASH  &kp INT1      &kp LS(GRAVE)  &trans       &trans         &kp N0         &kp N1      &kp N2      &kp N3     &kp FSLH    &trans
+                          &kp LCTRL   &kp LEFT_ALT          &kp LEFT_GUI  &kp SPACE      &kp ENTER    &kp BACKSPACE  &kp TAB        &kp LS(N0)  &kp PERIOD  &kp COMMA
             >;
 
             sensor-bindings =
@@ -102,11 +102,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11  &kp F12    &none     &kp K_PREV  &kp K_NEXT                                    &kp K_PLAY_PAUSE  &kp K_MUTE        &kp C_VOL_DN  &kp C_VOLUME_UP    &kp LA(BSPC)      &kp RG(BACKSPACE)
-&kp TAB     &none    &mkp MB1   &none     &mkp MB2    &none                                         &kp LA(UP)        &kp LS(LA(LEFT))  &kp UP        &kp LS(LA(RIGHT))  &kp RG(W)         &kp BSPC
-&kp LALT    &none    &none      &none     &none       &none                                         &kp LS(LA(UP))    &kp LEFT          &kp DOWN      &kp RIGHT          &kp LS(LA(DOWN))  &kp LA(DOWN)
-&kp LSHFT   &none    &none      &mkp MB3  &none       &none           &trans         &trans         &kp LG(B)         &kp RG(H)         &kp LG(C)     &kp LG(V)          &none             &trans
-                     &kp LCTRL  &trans    &trans      &mt LGUI SPACE  &lt 3 ENTER    &kp BACKSPACE  &kp RGUI          &trans            &trans        &kp MINUS
+&caps_word  &kp F11  &kp F12            &kp F13        &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19            &kp F20         &kp LA(BACKSPACE)
+&kp TAB     &none    &none              &kp C_BRI_MIN  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LG(LS(N3))    &kp LS(LG(N4))     &kp LG(LS(N5))  &kp DEL
+&kp LALT    &none    &none              &kp K_MUTE     &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp LA(DEL)
+&kp LSHFT   &none    &none              &kp C_PLAY     &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)             &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
+                     &kp RS(RA(RC(Q)))  &trans         &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp RG(BACKSPACE)
             >;
 
             sensor-bindings =
@@ -116,11 +116,11 @@
 
         SHORT-BT {
             bindings = <
-&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                       &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))  &none
-&kp LS(LC(AT))  &kp LS(LC(N1))  &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &kp LS(LC(T))                    &kp LS(LC(AT))  &kp LS(LC(N1))  &kp LS(LC(W))         &kp LS(LC(E))         &kp LS(LC(R))         &kp LS(LC(T))
-&kp LS(LC(N4))  &kp LS(LC(N3))  &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                    &kp LS(LC(N4))  &kp LS(LC(N3))  &kp LS(LC(S))         &kp LS(LC(D))         &kp LS(LC(F))         &kp LS(LC(G))
-&bt BT_CLR      &kp LS(LC(N5))  &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &kp LS(LC(B))  &trans    &trans  &none           &kp LS(LC(N5))  &kp LS(LC(X))         &kp LS(LC(C))         &kp LS(LC(V))         &kp LS(LC(B))
-                                &bt BT_SEL 0    &bt BT_SEL 1          &trans         &trans         &trans    &trans  &trans          &trans          &bt BT_SEL 2          &bt BT_SEL 3
+&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                             &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
+&none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                  &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
+&none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                          &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
+&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &none          &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &none
+                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &none   &trans  &none           &none           &none
             >;
         };
     };
