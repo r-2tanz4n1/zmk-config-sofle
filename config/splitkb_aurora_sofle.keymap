@@ -41,7 +41,7 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <175>;
+            tapping_term_ms = <170>;
             quick_tap_ms = <120>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -63,9 +63,8 @@
 &kp ESC       AS(N1)  &td_F2      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &mt LCTRL TAB AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
-&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &mkp MB4         AS(N)                AS(M)     &kp UP     AS(COMMA)         AS(DOT)          &mt RSHFT ENTER
-                      &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT EQUAL  &mt LGUI SLASH  &lt 1 SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &lt 2 SPACE  &mt RGUI LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
-            >;
+&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &none       &none         AS(N)                AS(M)     &kp UP     AS(COMMA)         AS(DOT)          &mt RSHFT ENTER
+                            &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT EQUAL  &lt 2 SLASH  &mt LGUI SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT            >;
 
             sensor-bindings =
                 <&inc_dec_kp UP DOWN>,
@@ -102,11 +101,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11  &kp F12            &kp F13        &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19            &kp F20         &kp LA(BACKSPACE)
-&kp TAB     &none    &none              &kp C_BRI_MIN  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LG(LS(N3))    &kp LS(LG(N4))     &kp LG(LS(N5))  &kp DEL
-&kp LALT    &none    &none              &kp K_MUTE     &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp LA(DEL)
-&kp LSHFT   &none    &none              &kp C_PLAY     &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)             &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                     &kp RS(RA(RC(Q)))  &trans         &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp RG(BACKSPACE)
+&caps_word  &kp F11  &kp F12            &kp F13     &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19            &kp F20         &kp LA(BACKSPACE)
+&kp TAB     &none    &none              &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LG(LS(N3))    &kp LS(LG(N4))     &kp LG(LS(N5))  &kp DEL
+&kp LALT    &none    &none              &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp LA(DEL)
+&kp LSHFT   &none    &none              &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)             &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
+                     &kp RS(RA(RC(Q)))  &trans      &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp RG(BACKSPACE)
             >;
 
             sensor-bindings =
