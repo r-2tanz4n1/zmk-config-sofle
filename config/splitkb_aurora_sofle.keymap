@@ -85,16 +85,14 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp ESC       &as N1  &as N2                  &as N3              &as N4       &as N5                                          &as N6          &as N7      &as N8      &as N9                   &as N0                  &as MINUS
-&kp TAB       &as Q   &as W                   &as E               &as R        &as T                                           &as Y           &as U       &as I       &as O                    &as P                   &as RIGHT_BRACKET
-&kp LEFT_ALT  &as A   &as S                   &as D               &as F        &as G                                           &as H           &as J       &as K       &as L                    &mt LEFT_ALT SEMICOLON  &as SQT
-&td_ShftCW    &as Z   &as X                   &as C               &as V        &as B           &none          &none            &as N           &as M       &as UP      &as COMMA                &as PERIOD              &mt RSHFT ENTER
-                      &mt LCTRL LEFT_BRACKET  &mt LEFT_ALT EQUAL  &lt 2 SLASH  &mt LGUI SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
+&kp ESC       &as N1  &as N2         &as N3              &as N4       &as N5                                          &as N6          &as N7      &as N8      &as N9                   &as N0                  &as MINUS
+&kp TAB       &as Q   &as W          &as E               &as R        &as T                                           &as Y           &as U       &as I       &as O                    &as P                   &as RIGHT_BRACKET
+&kp LEFT_ALT  &as A   &as S          &as D               &as F        &as G                                           &as H           &as J       &as K       &as L                    &mt LEFT_ALT SEMICOLON  &as SQT
+&td_ShftCW    &as Z   &as X          &as C               &as V        &as B           &none          &none            &as N           &as M       &as UP      &as COMMA                &as PERIOD              &mt RSHFT ENTER
+                      &mt LCTRL DEL  &mt LEFT_ALT EQUAL  &lt 2 SLASH  &mt LGUI SPACE  &lt 1 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 LEFT  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp UP DOWN>,
-                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp RIGHT LEFT>;
         };
 
         NUM {
@@ -108,7 +106,7 @@
             bindings = <
 &kp CAPS   &kp F1         &kp F2      &kp F3                &kp F4        &kp F5                                     &kp F6         &kp F7      &kp F8      &kp F9     &kp F10     &kp BACKSPACE
 &kp TAB    &kp LA(EQUAL)  &kp LS(N5)  &kp LS(N3)            &kp LS(N8)    &kp LS(N9)                                 &kp LS(N7)     &kp N7      &kp N8      &kp N9     &kp LA(N0)  &kp DEL
-&kp LALT   &none          &kp LA(N2)  &kp LA(N3)            &kp LA(N8)    &kp LA(N9)                                 &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6     &kp EQUAL   &none
+&kp LALT   &none          &kp LA(N2)  &kp LA(N3)            &kp LA(N8)    &kp LA(N9)                                 &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6     &kp EQUAL   &kp LEFT_BRACKET
 &kp LSHFT  &none          &kp F2      &kp NON_US_BACKSLASH  &kp INT1      &kp LS(GRAVE)  &trans       &trans         &kp N0         &kp N1      &kp N2      &kp N3     &kp FSLH    &trans
                           &kp LCTRL   &kp LEFT_ALT          &kp LEFT_GUI  &kp SPACE      &kp ENTER    &kp BACKSPACE  &kp TAB        &kp LS(N0)  &kp PERIOD  &kp COMMA
             >;
@@ -127,11 +125,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11  &kp F12            &kp F13     &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19            &kp F20         &kp LA(BACKSPACE)
+&caps_word  &kp F11  &kp F12            &kp F13     &kp F14               &kp F15                                 &kp F16               &kp F17         &kp F18           &kp F19            &kp F20         &kp LG(BACKSPACE)
 &kp TAB     &none    &none              &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LG(NUMBER_1))  &kp LS(LG(N2))  &kp LG(LS(N3))    &kp LS(LG(N4))     &kp LG(LS(N5))  &kp DEL
 &kp LALT    &none    &none              &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                            &kp LS(LA(UP))        &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp LA(DEL)
 &kp LSHFT   &none    &none              &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)             &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                     &kp RS(RA(RC(Q)))  &trans      &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp RG(BACKSPACE)
+                     &kp RS(RA(RC(Q)))  &trans      &trans                &trans                &trans    &trans  &trans                &kp RIGHT_GUI   &trans            &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
