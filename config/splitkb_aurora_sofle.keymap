@@ -15,10 +15,6 @@
     quick-tap-ms = <1>;
 };
 
-&soft_off {
-    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-    /delete-property/ split-peripheral-off-on-press;
-};
 
 / {
     behaviors {
@@ -49,6 +45,14 @@
 
             flavor = "tap-preferred";
         };
+
+        soff: soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            // split-peripheral-off-on-press;
+            hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+        };
+
     };
 
     macros {
@@ -82,12 +86,12 @@
         compatible = "zmk,combos";
 
         Soft_off_right {
-            bindings = <&soft_off>;
+            bindings = <&soff>;
             key-positions = <30 18 44>;
         };
 
         Soft_off_left {
-            bindings = <&soft_off>;
+            bindings = <&soff>;
             key-positions = <41 29 17>;
         };
     };
