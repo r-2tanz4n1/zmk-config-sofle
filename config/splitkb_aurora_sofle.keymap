@@ -34,7 +34,6 @@
             label = "TD_SHFTCW";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
-
             tapping-term-ms = <160>;
         };
 
@@ -46,6 +45,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        soff: soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            // split-peripheral-off-on-press;
+            hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+        };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Soft_off_right {
+            bindings = <&soff>;
+            key-positions = <30 18 44>;
+        };
+
+        Soft_off_left {
+            bindings = <&soff>;
+            key-positions = <41 29 17>;
+        };
+
     };
 
     keymap {
