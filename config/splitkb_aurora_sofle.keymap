@@ -15,11 +15,9 @@
     quick-tap-ms = <1>;
 };
 
-
 &soft_off {
     hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
-
 
 / {
     behaviors {
@@ -135,7 +133,7 @@
 &kp TAB     &kp F16  &kp F17            &kp F18     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &kp LA(LS(UP))  &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp RG(BACKSPACE)
 &kp LALT    &kp F19  &kp F20            &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                            &kp LEFT        &kp UP          &kp DOWN          &kp RIGHT          &none           &kp LA(DEL)
 &kp LSHFT   &none    &none              &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans  &kp LG(T)       &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                     &kp RS(RA(RC(Q)))  &trans      &trans                &trans                &trans    &trans  &trans          &kp RIGHT_GUI   &trans            &kp RA(BACKSPACE)
+                     &kp RS(RA(RC(Q)))  &soft_off   &trans                &trans                &trans    &trans  &trans          &kp RIGHT_GUI   &trans            &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
@@ -145,11 +143,11 @@
 
         SHORT-BT {
             bindings = <
-&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                             &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
-&none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                  &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
-&none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                          &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
-&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &none          &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &none
-                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &none   &trans  &none           &none           &none
+&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                                &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
+&none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                     &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
+&none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                             &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
+&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &none          &trans          &trans     &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &none
+                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &soft_off  &trans  &none           &none           &none
             >;
         };
     };
