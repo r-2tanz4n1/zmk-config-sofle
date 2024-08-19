@@ -34,6 +34,7 @@
             label = "TD_SHFTCW";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
+
             tapping-term-ms = <160>;
         };
 
