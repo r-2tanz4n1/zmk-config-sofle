@@ -12,9 +12,9 @@
 
 &mt {
     tapping-term-ms = <140>;
-    quick-tap-ms = <1>;
+    quick-tap-ms = <110>;
+    flavor = "tap-preferred";
 };
-
 
 / {
     behaviors {
@@ -49,10 +49,11 @@
         soff: soft_off {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
+
             // split-peripheral-off-on-press;
+
             hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
         };
-
     };
 
     macros {
