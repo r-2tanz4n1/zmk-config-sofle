@@ -56,7 +56,7 @@
         };
     };
 
-/* disabling soft off
+
     combos {
         compatible = "zmk,combos";
 
@@ -71,8 +71,6 @@
         };
 
     };
-
-*/
 
     keymap {
         compatible = "zmk,keymap";
