@@ -91,7 +91,7 @@
 
             sensor-bindings = 
                 <&inc_dec_kp DOWN UP>,
-                <&inc_dec_kp LEFT RIGHT>;
+                <&inc_dec_kp RIGHT LEFT>;
         };
 
         NUM {
