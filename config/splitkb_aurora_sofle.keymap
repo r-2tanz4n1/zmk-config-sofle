@@ -117,7 +117,9 @@
                       &mt LCTRL ESC  &mt LEFT_ALT DOWN  &lt 1 UP  &mt LGUI SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 LEFT  &lt 3 RIGHT_COMMAND  &mt RS(RA(RCTRL)) DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings =
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp RIGHT LEFT>;
         };
 
         NUM {
