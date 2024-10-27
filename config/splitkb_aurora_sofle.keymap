@@ -113,7 +113,7 @@
 &kp EQUAL     &as N1  &as N2         &as N3             &as N4       &as N5                                          &as N6          &as N7    &as N8      &as N9                 &as N0                  &as MINUS
 &kp TAB       &as Q   &as W          &as E              &as R        &as T                                           &as Y           &as U     &as I       &as O                  &as P                   &as RIGHT_BRACKET
 &kp LEFT_ALT  &as A   &as S          &as D              &as F        &as G                                           &as H           &as J     &as K       &as L                  &mt LEFT_ALT SEMICOLON  &as SQT
-&td_ShftCW    &as Z   &as X          &as C              &as V        &as B           &mkp MB3       &mkp MB4         &as N           &as M     &as COMMA   &as PERIOD             &as SLASH               &mt RSHFT ENTER
+&td_ShftCW    &as Z   &as X          &as C              &as V        &as B           &mkp MB3       &caps_word       &as N           &as M     &as COMMA   &as PERIOD             &as SLASH               &mt RSHFT ENTER
                       &mt LCTRL ESC  &mt LEFT_ALT LEFT  &lt 1 RIGHT  &mt LGUI SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DEL
             >;
 
