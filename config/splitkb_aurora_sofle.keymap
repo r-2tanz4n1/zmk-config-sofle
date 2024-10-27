@@ -87,7 +87,7 @@
 &kp EQUAL       AS(N1)  AS(N2)      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &mt LCTRL TAB AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
-&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &trans       &trans       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
+&td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
                       &mt LCTRL ESC  &mt LEFT_ALT LEFT  &lt 1 RIGHT  &mt LGUI SPACE  &lt 2 ENTER    &lt 1 BACKSPACE  &mt RGUI SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DEL >;
 
             sensor-bindings = 
