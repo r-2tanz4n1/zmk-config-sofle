@@ -17,18 +17,8 @@
     flavor = "tap-preferred";
 };
 
-
 / {
     behaviors {
-
-        td_F2: td_F2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_F2";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp F2>;
-
-            tapping-term-ms = <150>;
-        };
 
         td_ShftCW: td_ShftCW {
             compatible = "zmk,behavior-tap-dance";
@@ -86,9 +76,9 @@
             bindings = <
 &mt CAPSLOCK ESCAPE       AS(N1)  AS(N2)      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &kp TAB       AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
-&mt LEFT_ALT LA(NUMBER_2)  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
+&kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
-                      &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI MINUS  &lt 2 SPACE  &lt 1 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW >;
+                      &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI LA(NUMBER_2)  &lt 2 SPACE  &lt 1 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW >;
 
             sensor-bindings = 
                 <&inc_dec_kp DOWN UP>,
@@ -128,8 +118,8 @@
 &caps_word  &kp F11            &kp F12  &kp F13     &kp F14               &kp F15                                        &kp RS(RG(N1))  &kp RS(RG(N2))  &kp RS(RG(N3))    &kp RS(RG(N4))     &kp RS(RG(N5))  &kp DEL
 &kp TAB     &kp F16            &kp F17  &kp F18     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LA(LS(UP))  &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp RG(BACKSPACE)
 &kp LALT    &kp F19            &kp F20  &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LEFT        &kp UP          &kp DOWN          &kp RIGHT          &kp SPACE       &kp LA(DEL)
-&kp LSHFT   &kp LS(LA(LC(Q)))  &none    &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(T)       &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                               &trans   &trans      &trans                &trans                &none     &kp BACKSPACE  &none           &trans          &trans            &kp RA(BACKSPACE)
+&kp LSHFT   &kp LS(LA(LC(Q)))  &kp F2   &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(T)       &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
+                               &trans   &trans      &trans                &trans                &none     &kp BACKSPACE  &kp SPACE           &trans          &trans            &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
