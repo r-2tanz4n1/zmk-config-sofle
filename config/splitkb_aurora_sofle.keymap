@@ -78,7 +78,7 @@
 &kp TAB       AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
-                      &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI LA(NUMBER_2)  &lt 2 SPACE  &lt 1 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW >;
+                      &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI LA(NUMBER_2)  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW >;
 
             sensor-bindings = 
                 <&inc_dec_kp DOWN UP>,
