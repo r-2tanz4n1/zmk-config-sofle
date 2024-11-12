@@ -110,11 +110,11 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&mt CAPSLOCK ESCAPE  &as N1  &as N2            &as N3              &as N4                     &as N5                                               &as N6            &as N7    &as N8      &as N9                         &as N0                  &as MINUS
-&kp TAB              &as Q   &as W             &as E               &as R                      &as T                                                &as Y             &as U     &as I       &as O                          &as P                   &as RIGHT_BRACKET
-&kp LEFT_ALT         &as A   &as S             &as D               &as F                      &as G                                                &as H             &as J     &as K       &as L                          &mt LEFT_ALT SEMICOLON  &as SQT
-&td_ShftCW           &as Z   &as X             &as C               &as V                      &as B        &mkp MB3       &caps_word               &as N             &as M     &as COMMA   &as PERIOD                     &as SLASH               &mt RSHFT ENTER
-                             &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI LA(NUMBER_2)  &lt 2 SPACE  &lt 1 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW
+&mt CAPSLOCK ESCAPE  &as N1  &as N2                  &as N3             &as N4              &as N5                                               &as N6       &as N7    &as N8      &as N9                    &as N0                  &as MINUS
+&kp TAB              &as Q   &as W                   &as E              &as R               &as T                                                &as Y        &as U     &as I       &as O                     &as P                   &as RIGHT_BRACKET
+&kp LEFT_ALT         &as A   &as S                   &as D              &as F               &as G                                                &as H        &as J     &as K       &as L                     &mt LEFT_ALT SEMICOLON  &as SQT
+&td_ShftCW           &as Z   &as X                   &as C              &as V               &as B        &mkp MB3       &caps_word               &as N        &as M     &as COMMA   &as PERIOD                &as SLASH               &mt RSHFT ENTER
+                             &mt LCTRL LA(NUMBER_2)  &mt LEFT_ALT LEFT  &mt LEFT_GUI RIGHT  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
             >;
 
             sensor-bindings =
@@ -152,11 +152,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11            &kp F12  &kp F13     &kp F14               &kp F15                                        &kp RS(RG(N1))  &kp RS(RG(N2))  &kp RS(RG(N3))    &kp RS(RG(N4))     &kp RS(RG(N5))  &kp DEL
-&kp TAB     &kp F16            &kp F17  &kp F18     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LA(LS(UP))  &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp RG(BACKSPACE)
-&kp LALT    &kp F19            &kp F20  &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LEFT        &kp UP          &kp DOWN          &kp RIGHT          &kp SPACE       &kp LA(DEL)
-&kp LSHFT   &kp LS(LA(LC(Q)))  &kp F2   &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(T)       &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                               &trans   &trans      &trans                &trans                &none     &kp BACKSPACE  &none           &trans          &trans            &kp RA(BACKSPACE)
+&caps_word  &kp F11  &kp F12            &kp F13     &kp F14               &kp F15                                        &kp RS(RG(N1))    &kp RS(RG(N2))    &kp RS(RG(N3))  &kp RS(RG(N4))     &kp RS(RG(N5))  &kp DEL
+&kp TAB     &kp F16  &kp F17            &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LS(LC(UP))    &kp LS(LC(LEFT))  &kp UP_ARROW    &kp LC(LS(RIGHT))  &kp LA(TAB)     &kp RG(BACKSPACE)
+&kp LALT    &kp F18  &kp F19            &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LC(LS(DOWN))  &kp LEFT_ARROW    &kp DOWN        &kp RIGHT          &kp RIGHT_ALT   &kp SPACE
+&kp LSHFT   &none    &kp F2             &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(W)         &kp RG(K)         &kp LG(C)       &kp LG(V)          &kp RG(Z)       &trans
+                     &kp LS(LA(LC(Q)))  &trans      &trans                &trans                &trans    &kp BACKSPACE  &trans            &trans            &trans          &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
@@ -169,7 +169,7 @@
 &bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                             &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
 &none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                  &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
 &none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                          &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
-&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &none          &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &none
+&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &kp LS(LC(Z))  &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(Z))
                                 &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans  &trans  &none           &none           &none
             >;
         };
