@@ -78,7 +78,8 @@
 &kp TAB       AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
-                      &mt LCTRL DELETE  &mt LEFT_ALT EQUAL  &mt LEFT_GUI LA(NUMBER_2)  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 LEFT_ARROW  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) RIGHT_ARROW >;
+            &mt LCTRL LA(NUMBER_2)  &mt LEFT_ALT LEFT  &mt LEFT_GUI RIGHT  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RA(RCTRL)) DELETE
+            >;
 
             sensor-bindings = 
                 <&inc_dec_kp DOWN UP>,
@@ -94,11 +95,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPS   &kp F1               &kp F2      &kp F3      &kp F4      &kp F5                                 &kp F6         &kp F7      &kp F8      &kp F9     &kp F10     &kp DEL
-&kp TAB    &kp LA(NON_US_BSLH)  &kp LS(N5)  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)                             &kp LS(N7)     &kp N7      &kp N8      &kp N9     &kp LA(N0)  &kp LBKT
-&kp LALT   &none                &kp LA(N2)  &kp LA(N3)  &kp LA(N8)  &kp LA(N9)                             &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6     &kp EQUAL   &kp NON_US_HASH
-&kp LSHFT  &none                &kp F2      &kp MINUS   &kp INT1    &kp LS(GRAVE)  &trans       &trans     &kp N0         &kp N1      &kp N2      &kp N3     &kp FSLH    &trans
-                                &trans      &trans      &trans      &kp SPACE      &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp LS(N0)  &kp PERIOD  &kp COMMA
+&kp CAPS   &kp F1               &kp F2      &kp F3      &kp F4      &kp F5                                     &kp F6         &kp F7      &kp F8      &kp F9     &kp F10     &kp DEL
+&kp TAB    &kp LA(NON_US_BSLH)  &kp LS(N5)  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)                                 &kp LS(N7)     &kp N7      &kp N8      &kp N9     &kp LA(N0)  &kp LBKT
+&kp LALT   &none                &kp LA(N2)  &kp LA(N3)  &kp LA(N8)  &kp LA(N9)                                 &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6     &kp EQUAL   &kp NON_US_HASH
+&kp LSHFT  &none                &kp F2      &kp MINUS   &kp INT1    &kp LS(GRAVE)  &trans       &trans         &kp N0         &kp N1      &kp N2      &kp N3     &kp FSLH    &trans
+                                &trans      &trans      &trans      &kp SPACE      &kp ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp PERIOD  &kp COMMA
             >;
 
             sensor-bindings =
@@ -115,11 +116,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&caps_word  &kp F11            &kp F12  &kp F13     &kp F14               &kp F15                                        &kp RS(RG(N1))  &kp RS(RG(N2))  &kp RS(RG(N3))    &kp RS(RG(N4))     &kp RS(RG(N5))  &kp DEL
-&kp TAB     &kp F16            &kp F17  &kp F18     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LA(LS(UP))  &kp LA(UP)      &kp LS(LA(DOWN))  &kp LA(DOWN)       &kp LA(TAB)     &kp RG(BACKSPACE)
-&kp LALT    &kp F19            &kp F20  &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LEFT        &kp UP          &kp DOWN          &kp RIGHT          &kp SPACE       &kp LA(DEL)
-&kp LSHFT   &kp LS(LA(LC(Q)))  &kp F2   &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(T)       &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)       &trans
-                               &trans   &trans      &trans                &trans                &none     &kp BACKSPACE  &kp SPACE           &trans          &trans            &kp RA(BACKSPACE)
+&caps_word  &kp F11  &kp F12            &kp F13     &kp F14               &kp F15                                        &kp RS(RG(N1))    &kp RS(RG(N2))    &kp RS(RG(N3))  &kp RS(RG(N4))     &kp RS(RG(N5))  &kp DEL
+&kp TAB     &kp F16  &kp F17            &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LS(LC(UP))    &kp LS(LC(LEFT))  &kp UP_ARROW    &kp LC(LS(RIGHT))  &kp LA(TAB)     &kp RG(BACKSPACE)
+&kp LALT    &kp F18  &kp F19            &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LC(LS(DOWN))  &kp LEFT_ARROW    &kp DOWN        &kp RIGHT          &kp RIGHT_ALT   &kp SPACE
+&kp LSHFT   &none    &kp F2             &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(W)         &kp RG(K)         &kp LG(C)       &kp LG(V)          &kp RG(Z)       &trans
+                     &kp LS(LA(LC(Q)))  &trans      &trans                &trans                &trans    &kp BACKSPACE  &trans            &trans            &trans          &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
@@ -132,8 +133,8 @@
 &bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                             &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
 &none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                  &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
 &none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                          &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
-&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &none          &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &none
-                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &none   &trans  &none           &none           &none
+&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &kp LS(LC(Z))  &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(Z))
+                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans  &trans  &none           &none           &none
             >;
         };
     };
