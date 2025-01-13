@@ -4,30 +4,22 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 &mt {
-    tapping-term-ms = <140>;
+    tapping-term-ms = <125>;
     quick-tap-ms = <110>;
     flavor = "tap-preferred";
 };
 
 / {
     behaviors {
-        td_F2: td_F2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_F2";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp F2>;
-
-            tapping-term-ms = <150>;
-        };
-
         td_ShftCW: td_ShftCW {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHFTCW";
@@ -95,6 +87,41 @@
         Soft_off_left {
             bindings = <&soff>;
             key-positions = <41 29 17>;
+        };
+
+        Numpad_On {
+            bindings = <&to 1>;
+            key-positions = <55 56>;
+        };
+
+        Numpad_Off {
+            bindings = <&to 0>;
+            key-positions = <58 59>;
+        };
+
+        Funct_2 {
+            bindings = <&kp F2>;
+            key-positions = <38 39>;
+        };
+
+        Arroba {
+            bindings = <&kp LA(NUMBER_2)>;
+            key-positions = <26 27>;
+        };
+
+        Euro {
+            bindings = <&kp LA(N3)>;
+            key-positions = <27 28>;
+        };
+
+        Plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 11>;
+        };
+
+        Ordinal {
+            bindings = <&kp LBKT>;
+            key-positions = <22 23>;
         };
     };
 
@@ -166,11 +193,11 @@
 
         SHORT-BT {
             bindings = <
-&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(N4)     &kp LG(N5)                             &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
-&none           &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))  &none                                  &none   &kp LS(LC(T))   &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &none
-&none           &none           &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))  &kp LS(LC(G))                          &none   &none           &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
-&bt BT_CLR      &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))  &kp LS(LC(Z))  &trans          &trans  &none   &kp LS(LC(B))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(Z))
-                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans  &trans  &none           &none           &none
+&bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(LS(N4))  &kp LG(LS(N5))                          &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
+&none           &none           &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))   &kp LS(LC(T))                           &none   &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))
+&none           &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))   &kp LS(LC(G))                           &none   &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
+&bt BT_CLR      &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))   &kp LS(LC(B))   &trans          &trans  &none   &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))
+                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans  &trans  &none           &none           &none
             >;
         };
     };
