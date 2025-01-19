@@ -158,7 +158,7 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPS   &kp F1               &kp F2      &kp F3      &kp F4      &kp F5                                     &kp F6         &kp F7      &kp F8     &kp F9      &kp F10     &kp EQUAL
+&kp CAPS   &kp F1               &kp F2      &kp F3      &kp F4      &kp F5                                     &kp F6         &kp F7      &kp F8     &kp F9      &kp F10     &kp DELETE
 &kp TAB    &kp LA(NON_US_BSLH)  &kp LS(N5)  &kp LS(N3)  &kp LS(N8)  &kp LS(N9)                                 &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp LA(N0)  &kp LBKT
 &kp LALT   &none                &kp LA(N2)  &kp LA(N3)  &kp LA(N8)  &kp LA(N9)                                 &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp EQUAL   &kp NON_US_HASH
 &kp LSHFT  &none                &kp F2      &kp MINUS   &kp INT1    &kp LS(GRAVE)  &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH    &trans
@@ -183,7 +183,7 @@
 &kp TAB     &kp F16  &kp F17            &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                           &kp LS(LC(UP))    &kp LS(LC(LEFT))  &kp UP_ARROW    &kp LC(LS(RIGHT))  &kp LA(TAB)     &kp RG(BACKSPACE)
 &kp LALT    &kp F18  &kp F19            &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP                                   &kp LC(LS(DOWN))  &kp LEFT_ARROW    &kp DOWN        &kp RIGHT          &kp RIGHT_ALT   &kp SPACE
 &kp LSHFT   &none    &kp F2             &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &trans    &trans         &kp LG(W)         &kp RG(K)         &kp LG(C)       &kp LG(V)          &kp RG(Z)       &trans
-                     &kp LS(LA(LC(Q)))  &trans      &trans                &trans                &trans    &kp BACKSPACE  &trans            &trans            &trans          &kp RA(BACKSPACE)
+                     &kp LS(LA(LC(Q)))  &trans      &trans                &trans                &trans    &kp BACKSPACE  &kp SPACE         &kp TAB           &none           &kp RA(BACKSPACE)
             >;
 
             sensor-bindings =
