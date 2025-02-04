@@ -198,7 +198,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LA(LG(DOWN)) LA(LG(UP))>,
-                <&inc_dec_kp RA(RG(RIGHT)) RA(RG(LEFT))>;
+                <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
         };
 
         SHORT-BT {
