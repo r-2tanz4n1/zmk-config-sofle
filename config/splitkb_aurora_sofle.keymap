@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <dt-bindings/zmk/pointing.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
@@ -44,23 +48,6 @@
             #binding-cells = <0>;
             // split-peripheral-off-on-press;
             hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-        };
-    };
-
-
-    macros {
-        Mouse_Wheel_Right: Mouse_Wheel_Right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>;
-            label = "MOUSE_WHEEL_RIGHT";
-        };
-
-        Mouse_Wheel_Left: Mouse_Wheel_Left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>;
-            label = "MOUSE_WHEEL_LEFT";
         };
     };
 
