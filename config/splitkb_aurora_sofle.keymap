@@ -175,7 +175,7 @@
 &kp LALT      &kp F19               &kp F20               &kp K_MUTE  &kp C_VOL_DN       &kp C_VOL_UP                                 &kp LC(LS(DOWN))  &kp LEFT_ARROW  &kp DOWN        &kp RIGHT               &kp RIGHT_ALT            &kp SPACE
 &kp LSHFT     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PLAY  &kp C_PREV         &kp C_NEXT          &trans    &trans         &kp LG(W)         &kp RG(K)       &kp LG(C)       &kp LG(V)               &kp RG(Z)                &trans
                                     &kp LS(LC(Q))         &trans      &trans             &trans              &trans    &kp BACKSPACE  &kp SPACE         &kp TAB         &none           &kp RA(BACKSPACE)
-            >;
+              >;
 
             sensor-bindings =
                 <&inc_dec_kp LA(LS(DOWN)) LA(LS(UP))>,
