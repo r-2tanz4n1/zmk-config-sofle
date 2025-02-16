@@ -135,7 +135,6 @@
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
                       &mt LCTRL LA(NUMBER_2)  &mt LC(LS(LG(LEFT_ALT))) LEFT  &mt LEFT_GUI RIGHT  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 SPACE  &lt 2 UP  &mt LS(LC(LG(RIGHT_ALT))) DOWN  &lt 3 DELETE
             >;
-            >;
 
             sensor-bindings = 
                 <&inc_dec_kp DOWN UP>,
