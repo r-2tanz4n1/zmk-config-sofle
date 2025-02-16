@@ -121,18 +121,20 @@
 
         BASE {
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
+            // |  Esc |  1  |   2  |   3  |   4   |   5   | Down |   | Right |   6   |  7  |   8  |   9  |   0   |   '/?   |
+            // |  Tab |  q  |   w  |   e  |   r   |   t   |  Up  |   |  Left |   y   |  u  |   i  |   o  |   p   |    ´    |
+            // |  Opt |  a  |   s  |   d  |   f   |   g   |      |   |       |   h   |  j  |   k  |   l  | ç/Opt |   ~/^   |
+            // | Shft |  z  |   x  |   c  |   v   |   b   |      |   |       |   n   |  m  |   ,  |   .  |   -   | Ent/Shf |
+            // |      |     |   @  | Left | Right | Space |  Ent |   | Bkspc | Space |  Up | Down |  Del |       |         |
+            // |      |     | Ctrl | Hypr |  Cmd  |  Num  |  Nav |   |  Cmd  |  Num  | Nav | Hypr | Wind |       |         |
 
             bindings = <
 &kp ESC       AS(N1)  AS(N2)      AS(N3)          AS(N4)              AS(N5)                                          AS(N6)               AS(N7)    AS(N8)      AS(N9)                       AS(N0)                  AS(MINUS)
 &kp TAB       AS(Q)   AS(W)       AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)                        AS(P)                   AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)       AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)                        &mt LEFT_ALT SEMICOLON  AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)       AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)         AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
-                      &mt LCTRL LA(NUMBER_2)  &mt LC(LS(LG(LEFT_ALT))) LEFT  &mt LEFT_GUI RIGHT  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 SPACE  &lt 2 UP  &lt 3 DOWN  &mt RS(RC(RG(RIGHT_ALT))) DELETE
+                      &mt LCTRL LA(NUMBER_2)  &mt LC(LS(LG(LEFT_ALT))) LEFT  &mt LEFT_GUI RIGHT  &lt 1 SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &lt 1 SPACE  &lt 2 UP  &mt LS(LC(LG(RIGHT_ALT))) DOWN  &lt 3 DELETE
+            >;
             >;
 
             sensor-bindings = 
@@ -142,11 +144,11 @@
 
         NUM {
             // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
+            // |  CW  | F1 |  F2  |  F3  |  F4 |   F5  | Opt+D |   | Opt+R |   F6  |  F7 |  F8  |  F9  | F10 |  Del |
+            // |  Tab |  § |   %  |   #  |  (  |   )   | Opt+U |   | Opt+L |   /   |  7  |   8  |   9  |  ≠  |   º  |
+            // |  Opt |    |   @  |   €  |  [  |   ]   |       |   |       |   *   |  4  |   5  |   6  |  +  |   \  |
+            // | Shft |    |  F2  |   '  |  <  |   >   |       |   |       |   0   |  1  |   2  |   3  |  -  | Entr |
+            // |      |    | Ctrl |  Opt | Cmd | Space | Enter |   | Bkspc | Space |  =  |   ,  |   .  |     |      |
 
             bindings = <
 &caps_word  &kp F1               &kp F2            &kp F3        &kp F4        &kp F5                                           &kp F6         &kp F7      &kp F8     &kp F9      &kp F10     &kp DELETE
@@ -163,11 +165,11 @@
 
         NAV {
             // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
+            // |  CL  |   F11  |    F12   |  F13 |  F14  |  F15  |  MW+R |   | Ctrl+R |  Text OCR |  Pr Area  | Pr Active |  Pr Full | Pr Scroll |    DEL   |
+            // |  tab |   F16  |    F17   |  F18 | MWh L | MWh R |  MW+L |   | Ctrl+L |  MissCtrl |  Opt Tab  |     Up    | App Wind |    Desk   |  CMD+Bks |
+            // |  Opt |   F19  |    F20   | Mute | Vol - | Vol + |       |   |        |   Launch  |    Left   |    Down   |   Right  |    Opt    |   Space  |
+            // | Shft | Brgt - |  Brgt +  | Play |  Prev |  Next |       |   |        | Close Tab | Ins. Link |    Copy   |   Paste  |    Undo   | Entr/Shf |
+            // |      |        | Scrn Svr |  Opt |  Cmd  | Space | Enter |   |  Bkspc |   space   |    Tab    |   trans   |  Opt+Bks |           |          |
 
             bindings = <
 &kp CAPSLOCK  &kp F11               &kp F12               &kp F13     &kp F14            &kp F15                                      &kp RS(RG(N1))    &kp RS(RG(N2))  &kp RS(RG(N3))  &kp RS(RG(N4))          &kp RS(RG(N5))           &kp DEL
@@ -183,6 +185,14 @@
         };
 
         SHORT-BT {
+            // ------------------------------------------------------------------------------------------------------------
+            // | Clear All | Text OCR |  Pr Area | Pr Active |  Pr Full  | Pr Scroll |     |   |   |   |  Outlook |   Home   |    MBP   |    Work   |    Full   |
+            // |           |          | 3/4 Left |  3/4 Cntr | 3/4 Right |  1/2 top  |     |   |   |   |          | 3/4 Left | 3/4 Cntr | 3/4 Right |  1/2 top  |
+            // |           | M. Outlk | 2/3 Left |  2/3 Cntr | 2/3 Right | Next Disp |     |   |   |   | L Middle | 2/3 Left | 2/3 Cntr | 2/3 Right | Next Disp |
+            // |  Clear BT | M. Cornr | 1/2 Left |  1/2 Cntr | 1/2 Right |  1/2 bot  |     |   |   |   | R InfCnr | 1/2 Left | 1/2 Cntr | 1/2 Right |  1/2 bot  |
+            // |           |          |    BT0   |    BT1    |    BT2    |    BT3    | BT4 |   |   |   |          |          |    L3    |           |           |
+
+
             bindings = <
 &bt BT_CLR_ALL  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(LS(N4))  &kp LG(LS(N5))                          &none   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
 &none           &none           &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))   &kp LS(LC(T))                           &none   &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))
