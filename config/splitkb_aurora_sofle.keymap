@@ -164,19 +164,19 @@
 
         NAV {
             // ------------------------------------------------------------------------------------------------------------
-            // |  CL  |   F11  |    F12   |  F13 |  F14  |  F15  |  MW+R |   | Ctrl+R |  Text OCR |  Pr Area  | Pr Active |  Pr Full | Pr Scroll |    DEL   |
-            // |  tab |   F16  |    F17   |  F18 | MWh L | MWh R |  MW+L |   | Ctrl+L |  MissCtrl |  Opt Tab  |     Up    | App Wind |    Desk   |  CMD+Bks |
-            // |  Opt |   F19  |    F20   | Mute | Vol - | Vol + |       |   |        |   Launch  |    Left   |    Down   |   Right  |    Opt    |   Space  |
-            // | Shft | Brgt - |  Brgt +  | Play |  Prev |  Next |       |   |        | Close Tab | Ins. Link |    Copy   |   Paste  |    Undo   | Entr/Shf |
-            // |      |        | Scrn Svr |  Opt |  Cmd  | Space | Enter |   |  Bkspc |   space   |    Tab    |   trans   |  Opt+Bks |           |          |
+            // |  CL  |   F11  |  F12  |  F13 |  F14  |  F15  |  MW+R |   | Ctrl+R |  F16   |  F17  |  F18  |  F19  | F20 |    DEL   |
+            // |  tab |        | Brgt- | Brgt+| MWh L | MWh R |  MW+L |   | Ctrl+L |MissCtrl|OptTab |  Up   |AppWind|Desk |  CMD+Bks |
+            // |  Opt |        |       | Mute | Vol - | Vol + |       |   |        | Launch | Left  |  Down | Right | Opt |   Space  |
+            // | Shft |        |       | Play |  Prev |  Next |       |   |        |CloseTab|InsLink|  Copy | Paste |Undo | Entr/Shf |
+            // |      |        |ScrnSvr|  Opt |  Cmd  | Space | Enter |   |  Bkspc | space  |  Tab  | trans |Opt+Bks|     |          |
 
             bindings = <
-&kp CAPSLOCK  &kp F11               &kp F12               &kp F13     &kp F14            &kp F15                                      &kp RS(RG(N1))    &kp RS(RG(N2))  &kp RS(RG(N3))  &kp RS(RG(N4))          &kp RS(RG(N5))           &kp DEL
-&kp TAB       &kp F16               &kp F17               &kp F18     &msc SCRL_RIGHT    &msc SCRL_LEFT                              &kp LC(LS(UP))    &kp LA(TAB)     &kp UP_ARROW    &kp LC(LS(LEFT_ARROW))  &kp LC(LS(RIGHT_ARROW))  &kp RG(BACKSPACE)
-&kp LALT      &kp F19               &kp F20               &kp K_MUTE  &kp C_VOL_DN       &kp C_VOL_UP                                 &kp LC(LS(DOWN))  &kp LEFT_ARROW  &kp DOWN        &kp RIGHT               &kp RIGHT_ALT            &kp SPACE
-&kp LSHFT     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PLAY  &kp C_PREV         &kp C_NEXT          &trans    &trans         &kp LG(W)         &kp RG(K)       &kp LG(C)       &kp LG(V)               &kp RG(Z)                &trans
-                                    &kp LS(LC(Q))         &trans      &trans             &trans              &trans    &kp BACKSPACE  &kp SPACE         &kp TAB         &none           &kp RA(BACKSPACE)
-              >;
+&kp CAPSLOCK  &kp F11  &kp F12               &kp F13               &kp F14          &kp F15                                  &kp F16           &kp F17           &kp F18       &kp F19            &kp F20        &kp DEL
+&kp TAB       &none    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &msc SCRL_RIGHT  &msc SCRL_LEFT                           &kp LC(LS(UP))    &kp LS(LC(LEFT))  &kp UP_ARROW  &kp LC(LS(RIGHT))  &none          &kp RG(BACKSPACE)
+&kp LALT      &none    &none                 &kp K_MUTE            &kp C_VOL_DN     &kp C_VOL_UP                             &kp LC(LS(DOWN))  &kp LEFT_ARROW    &kp DOWN      &kp RIGHT          &kp RIGHT_ALT  &kp SPACE
+&kp LSHFT     &none    &none                 &kp C_PLAY            &kp C_PREV       &kp C_NEXT      &trans    &trans         &kp LG(W)         &kp RG(K)         &kp LG(C)     &kp LG(V)          &kp RG(Z)      &trans
+                       &kp LS(LC(Q))         &trans                &trans           &trans          &trans    &kp BACKSPACE  &kp SPACE         &kp TAB           &none         &kp RA(BACKSPACE)
+            >;
 
             sensor-bindings =
                 <&inc_dec_kp LA(LS(DOWN)) LA(LS(UP))>,
@@ -185,11 +185,11 @@
 
         SHORT-BT {
             // ------------------------------------------------------------------------------------------------------------
-            // | Clear All | Text OCR |  Pr Area | Pr Active |  Pr Full  | Pr Scroll |     |   |   |   |  Outlook |   Home   |    MBP   |    Work   |    Full   |
+            // | Clear All |          |          |           |           |           |     |   |   |   |          |   MBP    |   Work   |   Home    |    Full   |
             // |           |          | 3/4 Left |  3/4 Cntr | 3/4 Right |  1/2 top  |     |   |   |   |          | 3/4 Left | 3/4 Cntr | 3/4 Right |  1/2 top  |
             // |           | M. Outlk | 2/3 Left |  2/3 Cntr | 2/3 Right | Next Disp |     |   |   |   | L Middle | 2/3 Left | 2/3 Cntr | 2/3 Right | Next Disp |
             // |  Clear BT | M. Cornr | 1/2 Left |  1/2 Cntr | 1/2 Right |  1/2 bot  |     |   |   |   | R InfCnr | 1/2 Left | 1/2 Cntr | 1/2 Right |  1/2 bot  |
-            // |           |          |    BT0   |    BT1    |    BT2    |    BT3    | BT4 |   |   |   |          |          |    L3    |           |           |
+            // |           |          |    BT0   |    BT1    |    BT2    |    BT3    | BT4 |   |   |   |          |          |          |     L3    |           |
 
 
             bindings = <
