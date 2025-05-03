@@ -29,7 +29,6 @@
             label = "TD_SHFTCW";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
-
             tapping-term-ms = <160>;
         };
 
@@ -83,16 +82,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Soft_off_right {
-            bindings = <&soff>;
-            key-positions = <30 18 44>;
-        };
-
-        Soft_off_left {
-            bindings = <&soff>;
-            key-positions = <41 29 17>;
-        };
-
         Numpad_On {
             bindings = <&to 1>;
             key-positions = <44 45>;
@@ -104,9 +93,34 @@
             layers = <1>;
         };
 
+        Launchpad {
+            bindings = <&kp LC(LS(DOWN))>;
+            key-positions = <30 31>;
+        };
+
+        Asterisco {
+            bindings = <&kp LS(EQUAL)>;
+            key-positions = <10 9>;
+        };
+
+        Plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 11>;
+        };
+
+        Ordinal {
+            bindings = <&kp LBKT>;
+            key-positions = <22 23>;
+        };
+
         Funct_2 {
             bindings = <&kp F2>;
             key-positions = <14 15>;
+        };
+
+        Funct_3 {
+            bindings = <&kp F3>;
+            key-positions = <15 16>;
         };
 
         Funct_4 {
@@ -124,14 +138,14 @@
             key-positions = <39 40>;
         };
 
-        Plus {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 11>;
+        AbreColchete {
+            bindings = <&kp LA(N8)>;
+            key-positions = <28 27>;
         };
 
-        Ordinal {
-            bindings = <&kp LBKT>;
-            key-positions = <22 23>;
+        FechaColchete {
+            bindings = <&kp LA(N9)>;
+            key-positions = <29 28>;
         };
 
         CapsWord {
@@ -144,31 +158,6 @@
             key-positions = <24 25>;
         };
 
-        AbreColchete {
-            bindings = <&kp LA(N8)>;
-            key-positions = <28 27>;
-        };
-
-        FechaColchete {
-            bindings = <&kp LA(N9)>;
-            key-positions = <29 28>;
-        };
-
-        Funct_3 {
-            bindings = <&kp F3>;
-            key-positions = <15 16>;
-        };
-
-        Asterisco {
-            bindings = <&kp LS(EQUAL)>;
-            key-positions = <10 9>;
-        };
-
-        Launchpad {
-            bindings = <&kp LC(LS(DOWN))>;
-            key-positions = <30 31>;
-        };
-
         Space {
             bindings = <&kp SPACE>;
             key-positions = <55 56>;
@@ -177,6 +166,16 @@
         Delete {
             bindings = <&kp DEL>;
             key-positions = <59 58>;
+        };
+
+        Soft_off_right {
+            bindings = <&soff>;
+            key-positions = <30 18 44>;
+        };
+
+        Soft_off_left {
+            bindings = <&soff>;
+            key-positions = <41 29 17>;
         };
     };
 
@@ -234,8 +233,8 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPSLOCK  &kp F11                       &kp F12                 &kp F13                 &kp F14                 &kp F15                                             &none             &none           &none             &none              &none          &kp DEL
-&kp TAB       &none                         &none                   &none                   &none                   &none                                               &none             &kp LS(LC(UP))  &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &none          &kp RG(BACKSPACE)
+&kp CAPSLOCK  &kp F1                        &kp F2                  &kp F3                  &kp F4                  &kp F5                                              &none             &none           &none             &none              &none          &kp DEL
+&kp TAB       &kp F6                        &kp F7                  &kp F8                  &kp F9                  &kp F10                                             &none             &kp LS(LC(UP))  &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &none          &kp RG(BACKSPACE)
 &kp LALT      &kp F11                       &kp F12                 &kp F13                 &kp F14                 &kp F15                                             &kp LC(LS(DOWN))  &kp LG(T)       &none             &none              &kp RIGHT_ALT  &kp SPACE
 &kp LSHFT     &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LG(LS(LA(LC(N4))))  &kp LS(LA(LC(LG(N5))))  &trans       &trans         &kp LG(B)         &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)      &trans
                                             &kp LS(LC(Q))           &trans                  &trans                  &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB         &none             &kp RA(BACKSPACE)
@@ -248,10 +247,10 @@
 
         SHORT-BT {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR     &kp LS(LG(N2))  &kp LS(LG(NUMBER_3))  &kp LG(LS(N4))  &kp LG(LS(N5))                          &none      &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))
-&none           &none          &kp LS(LC(W))   &kp LS(LC(E))         &kp LS(LC(R))   &kp LS(LC(T))                           &none      &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))
-&none           &kp LS(LC(A))  &kp LS(LC(S))   &kp LS(LC(D))         &kp LS(LC(F))   &kp LS(LC(G))                           &none      &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))
-&none           &kp LS(LC(Z))  &kp LS(LC(X))   &kp LS(LC(C))         &kp LS(LC(V))   &kp LS(LC(B))   &trans          &trans  &none      &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))
+&bt BT_CLR_ALL  &bt BT_CLR     &none           &none                 &none           &none                                   &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))  &kp LC(LS(N6))
+&none           &none          &none           &none                 &none           &none                                   &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   &kp LS(LC(Y))
+&none           &none          &none           &none                 &none           &none                                   &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))   &kp LS(LC(H))
+&none           &none          &none           &none                 &none           &none           &trans          &trans  &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))   &kp LS(LC(N))
                                &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &trans  &kp SPACE  &none           &none           &none
             >;
         };
