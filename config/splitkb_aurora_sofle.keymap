@@ -238,11 +238,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPSLOCK  &kp F1                        &kp F2                  &kp F3                  &kp F4                  &kp F5                                              &kp N1            &kp N2          &kp N3            &kp N4             &kp N5         &kp DEL
-&kp TAB       &kp F6                        &kp F7                  &kp F8                  &kp F9                  &kp F10                                             &none             &kp LS(LC(UP))  &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &none          &kp RG(BACKSPACE)
+&kp CAPSLOCK  &kp F1                        &kp F2                  &kp F3                  &kp F4                  &kp F5                                              &kp N1            &kp N2          &kp N3            &kp N4             &kp N5         &kp LG(BACKSPACE)
+&kp TAB       &kp F6                        &kp F7                  &kp F8                  &kp F9                  &kp F10                                             &none             &kp LS(LC(UP))  &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &none          &kp RA(BACKSPACE)
 &kp LALT      &kp F11                       &kp F12                 &kp F13                 &kp F14                 &kp F15                                             &kp LC(LS(DOWN))  &kp LG(T)       &none             &none              &kp RIGHT_ALT  &kp NON_US_HASH
 &kp LSHFT     &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LG(LS(LA(LC(N4))))  &kp LS(LA(LC(LG(N5))))  &trans       &trans         &kp LG(B)         &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)      &trans
-                                            &kp LS(LC(Q))           &trans                  &trans                  &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB         &none             &kp RA(BACKSPACE)
+                                            &kp LS(LC(Q))           &trans                  &trans                  &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB         &none             &kp DEL
             >;
 
             sensor-bindings =
