@@ -86,26 +86,26 @@
 
         Funct_2 {
             bindings = <&kp F2>;
-            key-positions = <14 15>;
+            key-positions = <2 3>;
         };
 
         Funct_3 {
             bindings = <&kp F3>;
-            key-positions = <15 16>;
+            key-positions = <3 4>;
         };
 
         Funct_4 {
             bindings = <&kp F4>;
-            key-positions = <16 17>;
+            key-positions = <5 4>;
         };
 
-        Arroba {
-            bindings = <&kp LA(NUMBER_2)>;
+        Menor {
+            bindings = <&kp NUBS>;
             key-positions = <38 39>;
         };
 
-        Euro {
-            bindings = <&kp LA(N3)>;
+        Maior {
+            bindings = <&kp LS(NUBS)>;
             key-positions = <39 40>;
         };
 
@@ -166,7 +166,7 @@
 &kp TAB       AS(Q)   AS(W)               AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)            AS(P)             AS(RIGHT_BRACKET)
 &kp LEFT_ALT  AS(A)   AS(S)               AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)            AS(SEMICOLON)     AS(SQT)
 &td_ShftCW    AS(Z)   AS(X)               AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)   AS(DOT)          AS(SLASH)         &mt RSHFT ENTER
-                      &mt LCTRL LS(NUBS)  &mt LC(LS(LA(LEFT_GUI))) NUBS  &mt LEFT_GUI DEL  &lt 2 SPACE  &lt 3 ENTER    &lt 3 BACKSPACE  &lt 2 LEFT  &mt RIGHT_GUI UP  &mt LS(LC(LA(RIGHT_GUI))) DOWN  &mt RIGHT_ALT RIGHT
+                      &mt LCTRL LA(NUMBER_2)  &mt LC(LS(LA(LEFT_GUI))) LA(NUBS)  &mt LEFT_GUI DEL  &lt 2 SPACE  &lt 3 ENTER    &lt 3 BACKSPACE  &lt 2 LEFT  &mt RIGHT_GUI UP  &mt LS(LC(LA(RIGHT_GUI))) DOWN  &mt RIGHT_ALT RIGHT
             >;
 
             sensor-bindings = 
@@ -185,7 +185,7 @@
             bindings = <
 &kp GRAVE  &kp F1     &kp F2            &kp F3        &kp F4        &kp F5                                  &kp LA(N3)     &kp NUBS    &kp LS(N8)  &kp LS(N9)  &kp LS(NUBS)  &kp DELETE
 &kp TAB    &kp F6     &kp F7            &kp F8        &kp F9        &kp F10                                 &kp LS(N7)     &kp N7      &kp N8      &kp N9      &none         &kp LBKT
-&kp LALT   &kp F11    &kp F12           &kp LA(N8)    &kp LA(N9)    &none                                   &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6      &kp EQUAL     &kp NON_US_HASH
+&kp LALT   &kp F11    &kp F12           &kp LA(N0)    &kp LA(N8)    &kp LA(N9)                              &kp LS(EQUAL)  &kp N4      &kp N5      &kp N6      &kp EQUAL     &kp NON_US_HASH
 &kp LSHFT  &kp MINUS  &kp LS(N2)        &kp LS(N3)    &kp LS(N4)    &kp LS(N5)  &trans       &trans         &kp N0         &kp N1      &kp N2      &kp N3      &kp FSLH      &trans
                       &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE   &kp ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA   &kp PERIOD
             >;
@@ -204,9 +204,9 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp CAPSLOCK  &kp F1                        &kp F2                  &kp F3                  &kp F4                  &kp F5                                              &kp N1            &kp N2          &kp N3            &kp N4             &kp N5         &kp RG(BACKSPACE)
+&kp CAPSLOCK  &kp F1                        &kp F2                  &kp F3                  &kp F4                  &kp F5                                              &kp N1            &kp N2          &kp N3            &kp N4             &kp N5         &kp LG(BACKSPACE)
 &kp TAB       &kp F6                        &kp F7                  &kp F8                  &kp F9                  &kp F10                                             &none             &kp LS(LC(UP))  &kp LS(LC(LEFT))  &kp LC(LS(RIGHT))  &none          &kp RA(BACKSPACE)
-&kp LALT      &kp F11                       &kp F12                 &kp F13                 &kp F14                 &kp F15                                             &kp LC(LS(DOWN))  &kp LG(T)       &none             &none              &kp RIGHT_ALT  &kp NON_US_HASH
+&kp LALT      &kp F11                       &kp F12                 &kp F13                 &kp F14                 &kp F15                                             &kp LC(LS(DOWN))  &kp LG(T)       &kp RG(K)         &kp RG(L)          &kp RIGHT_ALT  &kp NON_US_HASH
 &kp LSHFT     &kp LS(LA(LC(LG(NUMBER_1))))  &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LG(LS(LA(LC(N4))))  &kp LS(LA(LC(LG(N5))))  &trans       &trans         &kp LG(B)         &kp RG(W)       &kp LG(C)         &kp LG(V)          &kp RG(Z)      &trans
                                             &kp LS(LC(Q))           &trans                  &trans                  &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB         &none             &kp DEL
             >;
