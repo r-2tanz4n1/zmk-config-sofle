@@ -242,7 +242,7 @@
 &kp TAB       &none                   &kp LS(LA(LC(LG(W))))   &kp LS(LA(LC(LG(E))))   &kp LG(LS(LA(LC(R))))   &kp LS(LA(LC(LG(T))))                               &kp LS(LC(UP))    &kp RG(T)  &kp UP     &kp LC(LS(RIGHT))  &kp LS(LC(LEFT))  &kp RIGHT_GUI
 &kp LALT      &kp LS(LA(LC(LG(A))))   &kp LS(LA(LC(LG(S))))   &kp LS(LA(LC(LG(D))))   &kp LG(LS(LA(LC(F))))   &kp LS(LA(LC(LG(G))))                               &kp LC(LS(DOWN))  &kp LEFT   &kp DOWN   &kp RIGHT          &kp SPACE         &kp RIGHT_ALT
 &kp LSHFT     &kp LS(LA(LC(LG(Z))))   &kp LS(LA(LC(LG(X))))   &kp LS(LA(LC(LG(C))))   &kp LG(LS(LA(LC(V))))   &kp LS(LA(LC(LG(B))))   &trans       &trans         &kp LG(B)         &kp RG(W)  &kp LG(C)  &kp LG(V)          &kp RG(Z)         &kp RG(ENTER)
-                                      &kp LS(LC(Q))           &trans                  &trans                  &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB    &none      &kp DEL
+                                      &kp LS(LC(Q))           &trans                  &kp LEFT_GUI            &kp SPACE               &kp ENTER    &kp BACKSPACE  &kp SPACE         &kp TAB    &none      &kp DEL
             >;
 
             sensor-bindings =
