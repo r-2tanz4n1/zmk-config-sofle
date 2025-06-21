@@ -144,11 +144,6 @@
             key-positions = <56 55>;
         };
 
-        SpaceLeft {
-            bindings = <&kp SPACE>;
-            key-positions = <54 53>;
-        };
-
         Raycast {
             bindings = <&kp LS(LC(LA(LG(SPACE))))>;
             key-positions = <31 32>;
@@ -176,7 +171,7 @@
 &kp TAB         AS(Q)   AS(W)         AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)            AS(P)                 AS(RIGHT_BRACKET)
 &kp LEFT_ALT    AS(A)   AS(S)         AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)            &mt RIGHT_ALT SEMI    AS(SQT)
 &kp LEFT_SHIFT  AS(Z)   AS(X)         AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)   AS(DOT)          AS(SLASH)            &mt RSHFT ENTER
-                      &mt LCTRL LEFT  &lt 3 UP  &mt LS(LA(LC(LEFT_GUI))) DOWN  &mt LEFT_GUI RIGHT  &lt 2 ENTER    &mt RS(RA(RC(RIGHT_GUI))) BACKSPACE  &lt 2 SPACE  &mt RIGHT_GUI DEL  &kp UP     &kp DOWN
+                      &mt LCTRL LEFT  &lt 3 RIGHT  &mt LS(LA(LC(LEFT_GUI))) DEL  &mt LEFT_GUI SPACE  &lt 2 ENTER    &mt RS(RA(RC(RIGHT_GUI))) BACKSPACE  &lt 2 SPACE  &mt RIGHT_GUI DEL  &kp UP     &kp DOWN
             >;
 
             sensor-bindings = 
