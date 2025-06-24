@@ -124,7 +124,7 @@
         };
 
        Numpad_On {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <44 45>;
         };
 
@@ -171,7 +171,7 @@
 &kp TAB         AS(Q)   AS(W)         AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)            AS(P)                 AS(RIGHT_BRACKET)
 &kp LEFT_ALT    AS(A)   AS(S)         AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)            &mt RIGHT_ALT SEMI    AS(SQT)
 &kp LEFT_SHIFT  AS(Z)   AS(X)         AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)   AS(DOT)          AS(SLASH)            &mt RSHFT ENTER
-                      &mt LCTRL LEFT  &lt 3 RIGHT  &mt LS(LA(LC(LEFT_GUI))) DEL  &mt LEFT_GUI SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &mo 2   &kp RS(RA(RC(RIGHT_GUI)))  &lt 3 UP   &kp DOWN
+                      &mt LCTRL LEFT  &lt 3 RIGHT  &mt LS(LA(LC(LEFT_GUI))) DEL  &mt LEFT_GUI SPACE  &lt 1 ENTER    &mt RIGHT_GUI BACKSPACE  &mo 1   &kp RS(RA(RC(RIGHT_GUI)))  &lt 3 UP   &kp DOWN
             >;
 
             sensor-bindings = 
