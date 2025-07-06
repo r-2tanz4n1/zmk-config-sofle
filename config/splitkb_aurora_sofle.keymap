@@ -129,12 +129,12 @@
         };
 
         Menor {
-            bindings = <&kp NUBS>;
+            bindings = <&kp INT1>;
             key-positions = <39 40>;
         };
 
         Maior {
-            bindings = <&kp LS(NUBS)>;
+            bindings = <&kp LS(INT1)>;
             key-positions = <40 41>;
         };
 
@@ -153,8 +153,8 @@
             key-positions = <22 23>;
         };
 
-       Numpad_On {
-            bindings = <&to 1>;
+        Numpad_On {
+            bindings = <&to 2>;
             key-positions = <44 45>;
         };
 
@@ -259,11 +259,11 @@
 
         L3 {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none                            &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))  &kp LC(LS(N6))
-&none           &none         &none         &none         &none  &none                            &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   &kp LS(LC(Y))
-&none           &none         &none         &none         &none  &none                            &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))   &kp LS(LC(H))
-&bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none  &none          &trans    &trans  &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))   &kp LS(LC(N))
-                              &none         &none         &none  &kp LG(SPACE)  &none     &none   &kp SPACE       &none           &none           &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none                    &kp LS(LC(N1))  &kp LC(LS(N2))  &kp LS(LC(N3))  &kp LS(LC(N4))  &kp LC(LS(N5))  &kp LC(LS(N6))
+&none           &none         &none         &none         &none  &none                    &none           &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &kp LS(LC(T))   &kp LS(LC(Y))
+&none           &none         &none         &none         &none  &none                    &kp LS(LC(A))   &kp LS(LC(S))   &kp LS(LC(D))   &kp LS(LC(F))   &kp LS(LC(G))   &kp LS(LC(H))
+&bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &none  &none  &trans    &trans  &kp LS(LC(Z))   &kp LS(LC(X))   &kp LS(LC(C))   &kp LS(LC(V))   &kp LS(LC(B))   &kp LS(LC(N))
+                              &none         &none         &none  &none  &none     &none   &none           &none           &none           &none
             >;
 
             label = "Window Management";
