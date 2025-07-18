@@ -30,13 +30,13 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&caps_word>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <145>;
         };
 
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <160>;
+            tapping_term_ms = <145>;
             quick_tap_ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -123,14 +123,19 @@
             key-positions = <22 23>;
         };
 
-       Numpad_On {
-            bindings = <&to 1>;
-            key-positions = <44 45>;
-        };
-
         SpaceRight {
             bindings = <&kp SPACE>;
             key-positions = <45 46>;
+        };
+
+        Raycast {
+            bindings = <&kp LS(LC(LA(LG(SPACE))))>;
+            key-positions = <31 32>;
+        };
+
+       Numpad_On {
+            bindings = <&to 1>;
+            key-positions = <44 45>;
         };
 
         Numpad_Off {
@@ -139,14 +144,14 @@
             layers = <1>;
         };
 
+        QuickNumpad {
+            bindings = <&mo 1>;
+            key-positions = <53 54>;
+        };
+
         Layer3 {
             bindings = <&mo 3>;
             key-positions = <56 55>;
-        };
-
-        Raycast {
-            bindings = <&kp LS(LC(LA(LG(SPACE))))>;
-            key-positions = <31 32>;
         };
 
         Soft_off_right {
@@ -171,7 +176,7 @@
 &kp TAB         AS(Q)   AS(W)         AS(E)           AS(R)               AS(T)                                           AS(Y)                AS(U)     AS(I)       AS(O)            AS(P)                 AS(RIGHT_BRACKET)
 &kp LEFT_ALT    AS(A)   AS(S)         AS(D)           AS(F)               AS(G)                                           AS(H)                AS(J)     AS(K)       AS(L)            &mt RIGHT_ALT SEMI    AS(SQT)
 &kp LEFT_SHIFT  AS(Z)   AS(X)         AS(C)           AS(V)               AS(B)           &mkp MB3       &caps_word       AS(N)                AS(M)     AS(COMMA)   AS(DOT)          AS(SLASH)            &mt RSHFT ENTER
-                      &mt LCTRL LEFT  &lt 3 RIGHT  &mt LS(LA(LC(LEFT_GUI))) DEL  &mt LEFT_GUI SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &mo 2   &kp RS(RA(RC(RIGHT_GUI)))  &lt 3 UP   &kp DOWN
+                      &mt LCTRL LEFT  &lt 3 RIGHT  &mt LS(LA(LC(LEFT_GUI))) DEL  &mt LEFT_GUI SPACE  &lt 2 ENTER    &mt RIGHT_GUI BACKSPACE  &mo 2   &mt RS(RA(RC(RIGHT_GUI))) DEL  &lt 3 UP   &kp DOWN
             >;
 
             sensor-bindings = 
