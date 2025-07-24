@@ -140,7 +140,7 @@
 
         Numpad_Off {
             bindings = <&to 0>;
-            key-positions = <48 49>;
+            key-positions = <34 35>;
             layers = <1>;
         };
 
