@@ -248,11 +248,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none      &kp LS(LA(LC(LG(N1))))  &kp C_PLAY_PAUSE  &kp C_PREVIOUS        &kp C_FAST_FORWARD        &kp LS(LA(LC(LG(N5))))                              &kp N1                 &kp N2                &kp N3     &kp N4     &kp N5            &kp LG(BACKSPACE)
-&kp TAB    &kp CAPSLOCK            &kp LG(W)         &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC             &kp LG(T)                                           &kp RG(T)              &kp LS(LC(UP_ARROW))  &kp UP     &kp RG(O)  &kp LS(LC(LEFT))  &kp DEL
-&kp LALT   &none                   &kp K_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP           &none                                               &kp LC(LS(LA(LG(H))))  &kp LEFT              &kp DOWN   &kp RIGHT  &kp RIGHT_ALT     &kp RIGHT_GUI
-&kp LSHFT  &kp LG(Z)               &kp LG(X)         &kp LG(C)             &kp LG(V)                 &kp LG(B)               &trans       &trans         &kp RG(W)              &kp SPACE             &kp LG(C)  &kp LG(V)  &kp RG(Z)         &mt RIGHT_SHIFT ENTER
-                                   &kp LS(LC(Q))     &kp LEFT_ALT          &kp LS(LA(LC(LEFT_GUI)))  &kp LEFT_GUI            &kp ENTER    &kp BACKSPACE  &kp RG(SPACE)          &kp TAB               &none      &none
+&none      &kp LS(LA(LC(LG(N1))))  &kp C_PLAY_PAUSE  &kp C_PREVIOUS        &kp C_FAST_FORWARD        &kp LS(LA(LC(LG(N5))))                              &kp N1                 &kp N2          &kp N3     &kp N4            &kp N5             &kp LG(BACKSPACE)
+&kp TAB    &kp CAPSLOCK            &kp LG(W)         &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC             &kp LG(T)                                           &kp LC(LS(DOWN))       &kp LC(LS(UP))  &kp UP     &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp DEL
+&kp LALT   &none                   &kp K_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP           &none                                               &kp LC(LS(LA(LG(H))))  &kp LEFT        &kp DOWN   &kp RIGHT         &kp RIGHT_ALT      &kp RIGHT_GUI
+&kp LSHFT  &kp LG(Z)               &kp LG(X)         &kp LG(C)             &kp LG(V)                 &kp LG(B)               &trans       &trans         &kp RG(W)              &kp SPACE       &kp LG(C)  &kp LG(V)         &kp RG(Z)          &mt RIGHT_SHIFT ENTER
+                                   &kp LS(LC(Q))     &kp LEFT_ALT          &kp LS(LA(LC(LEFT_GUI)))  &kp LEFT_GUI            &kp ENTER    &kp BACKSPACE  &kp RG(SPACE)          &kp TAB         &none      &none
             >;
 
             sensor-bindings =
