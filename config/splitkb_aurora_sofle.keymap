@@ -71,7 +71,7 @@
 
         Funct_2 {
             bindings = <&kp F2>;
-            key-positions = <2 3>;
+            key-positions = <30 31>;
         };
 
         Funct_3 {
@@ -81,12 +81,12 @@
 
         Funct_4 {
             bindings = <&kp F4>;
-            key-positions = <5 4>;
+            key-positions = <44 45>;
         };
 
         CapsLock {
             bindings = <&kp LS(CAPSLOCK)>;
-            key-positions = <13 14>;
+            key-positions = <36 37>;
         };
 
         CapsWord {
@@ -152,6 +152,11 @@
         Soft_off_right {
             bindings = <&soff>;
             key-positions = <30 18 44>;
+        };
+
+        Num2 {
+            bindings = <&kp N2>;
+            key-positions = <2 1>;
         };
     };
 
