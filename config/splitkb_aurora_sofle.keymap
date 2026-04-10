@@ -273,11 +273,11 @@ AS(MINUS)   &hm LCTRL A &hm LALT S   &hm LGUI D   &hm LSHFT F   AS(G)           
         NAV {
             label = "Navigation";
             bindings = <
-&none          &kp N6     &kp N7        &kp N8         &kp N9                        &kp N0                                 &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &kp LG(BACKSPACE)
-&kp ESC        &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)                     &kp LG(T)                              &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp DEL
-&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT                     &kp LG(F)                              &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp RIGHT_ALT      &kp RIGHT_GUI
+&none          &kp N6     &kp N7        &kp N8         &kp N9                        &kp N0                                 &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &none
+&kp ESC        &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)                     &kp LG(T)                              &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(BACKSPACE)
+&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT                     &kp LG(F)                              &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp LG(K)          &kp LG(L)
 &kp LS(LC(Q))  &kp LG(Z)  &kp LG(X)     &kp LG(C)      &kp LG(V)                     &kp LG(B)  &trans       &trans         &kp SPACE              &kp LG(M)                                  &kp LG(C)         &kp LG(V)         &kp RG(Z)          &kp ENTER
-                          &kp K_MUTE    &kp LS(LG(A))  &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE  &kp ENTER    &kp BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
+                          &kp K_MUTE    &kp LS(LG(M))  &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE  &kp ENTER    &kp BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
             >;
 
             sensor-bindings =
@@ -289,10 +289,10 @@ AS(MINUS)   &hm LCTRL A &hm LALT S   &hm LGUI D   &hm LSHFT F   AS(G)           
         NUM {
             label = "Numpad";
             bindings = <
-&kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                    &kp F6         &kp F7      &kp F8     &kp F9      &kp F10    &kp F11
-&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                                &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL  &kp LBKT
-&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LS(NUHS)                              &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp DOT    &kp NON_US_HASH
-&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)    &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH   &kp ENTER
+&kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                    &kp F6         &kp F7      &kp F8     &kp F9      &kp F10         &kp F11
+&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                                &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL       &kp LBKT
+&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LS(NUHS)                              &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)   &kp NON_US_HASH
+&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)    &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH        &kp ENTER
                         &kp F2      &kp F4      &kp TAB     &kp SPACE     &kp ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
             >;
 
