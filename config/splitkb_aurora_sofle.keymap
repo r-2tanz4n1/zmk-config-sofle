@@ -78,94 +78,189 @@
     combos {
         compatible = "zmk,combos";
 
-        Funct_2 {
-            bindings = <&kp F2>;
-            key-positions = <30 31>;
+        Num1 {
+            bindings = <&kp N1>;
+            key-positions = <12 13>;
+            layers = <0>;
         };
 
-        Funct_3 {
-            bindings = <&kp F3>;
-            key-positions = <3 4>;
+        Num2 {
+            bindings = <&kp N2>;
+            key-positions = <13 14>;
+            layers = <0>;
         };
 
-        Funct_4 {
-            bindings = <&kp F4>;
-            key-positions = <44 45>;
-        };
-
-        CapsLock {
-            bindings = <&kp LS(CAPSLOCK)>;
-            key-positions = <36 37>;
-        };
-
-        CapsWord {
-            bindings = <&caps_word>;
+        Num3 {
+            bindings = <&kp N3>;
             key-positions = <14 15>;
+            layers = <0>;
         };
 
-        Arroba {
-            bindings = <&kp LA(NUMBER_2)>;
+        Num4 {
+            bindings = <&kp N4>;
+            key-positions = <15 16>;
+            layers = <0>;
+        };
+
+        Num5 {
+            bindings = <&kp N5>;
+            key-positions = <16 17>;
+            layers = <0>;
+        };
+
+        Num6 {
+            bindings = <&kp N6>;
+            key-positions = <18 19>;
+            layers = <0>;
+        };
+
+        Num7 {
+            bindings = <&kp N7>;
+            key-positions = <19 20>;
+            layers = <0>;
+        };
+
+        Num8 {
+            bindings = <&kp N8>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        Num9 {
+            bindings = <&kp N9>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        Num0 {
+            bindings = <&kp N0>;
+            key-positions = <22 23>;
+            layers = <0>;
+        };
+
+        AtSign {
+            bindings = <&kp LA(N2)>;
             key-positions = <25 26>;
+            layers = <0>;
         };
 
         Euro {
             bindings = <&kp LA(N3)>;
             key-positions = <26 27>;
+            layers = <0>;
         };
 
-        AbreColchete {
+        LBracket {
             bindings = <&kp LA(N8)>;
-            key-positions = <28 27>;
+            key-positions = <27 28>;
+            layers = <0>;
         };
 
-        FechaColchete {
+        RBracket {
             bindings = <&kp LA(N9)>;
-            key-positions = <29 28>;
+            key-positions = <28 29>;
+            layers = <0>;
         };
 
-        Menor {
-            bindings = <&kp INT1>;
-            key-positions = <39 40>;
+        F2Combo {
+            bindings = <&kp F2>;
+            key-positions = <30 31>;
+            layers = <0>;
         };
 
-        Maior {
-            bindings = <&kp LS(INT1)>;
-            key-positions = <40 41>;
-        };
-
-        Asterisco {
+        Asterisk {
             bindings = <&kp LS(EQUAL)>;
-            key-positions = <10 9>;
+            key-positions = <31 32>;
+            layers = <0>;
         };
 
-        Plus {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 11>;
+        Question {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <32 33>;
+            layers = <0>;
+        };
+
+        Slash {
+            bindings = <&kp LS(N7)>;
+            key-positions = <33 34>;
+            layers = <0>;
         };
 
         Ordinal {
             bindings = <&kp LBKT>;
-            key-positions = <22 23>;
+            key-positions = <34 35>;
+            layers = <0>;
         };
 
-        SpaceRight {
-            bindings = <&kp SPACE>;
+        CapsLockCombo {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <36 37>;
+            layers = <0>;
+        };
+
+        LessThan {
+            bindings = <&kp INT1>;
+            key-positions = <37 38>;
+            layers = <0>;
+        };
+
+        GreaterThan {
+            bindings = <&kp LS(INT1)>;
+            key-positions = <38 39>;
+            layers = <0>;
+        };
+
+        LParen {
+            bindings = <&kp LS(N8)>;
+            key-positions = <39 40>;
+            layers = <0>;
+        };
+
+        RParen {
+            bindings = <&kp LS(N9)>;
+            key-positions = <40 41>;
+            layers = <0>;
+        };
+
+        F4Combo {
+            bindings = <&kp F4>;
+            key-positions = <44 45>;
+            layers = <0>;
+        };
+
+        Quote {
+            bindings = <&kp LS(N2)>;
             key-positions = <45 46>;
+            layers = <0>;
         };
 
-        Layer3 {
-            bindings = <&mo 0>;
-            key-positions = <56 55>;
+        Exclamation {
+            bindings = <&kp LS(N1)>;
+            key-positions = <46 47>;
+            layers = <0>;
         };
 
-        Soft_off_right {
+        Plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <47 48>;
+            layers = <0>;
+        };
+
+        Fn3Left {
+            bindings = <&mo 3>;
+            key-positions = <53 54>;
+            layers = <0>;
+        };
+
+        Fn3Right {
+            bindings = <&mo 3>;
+            key-positions = <55 56>;
+            layers = <0>;
+        };
+
+          Soft_off_right {
             bindings = <&soff>;
             key-positions = <30 18 44>;
-        };
-
-        Num2 {
-            bindings = <&kp N2>;
-            key-positions = <2 1>;
         };
     };
 
