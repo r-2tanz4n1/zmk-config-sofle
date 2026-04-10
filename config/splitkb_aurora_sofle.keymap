@@ -37,6 +37,27 @@
             bindings = <&shifted>, <&kp>;
         };
 
+        hm: home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_MOD";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+
+        hold-trigger-key-positions = <
+            /* top row */
+            0 1 2 3 4 5 6 7 8 9 10 11
+            /* bottom row */
+            36 37 38 39 40 41 42 43 44 45 46 47 48 49
+            /* thumbs */
+            50 51 52 53 54 55 56 57 58 59
+        >;
+        hold-trigger-on-release;
+        bindings = <&kp>, <&kp>;
+        };
+
         soff: soft_off {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
@@ -268,13 +289,7 @@
         compatible = "zmk,keymap";
 
         BASE {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
-
+            label = "Base";
             bindings = <
 &none       &as N1  &as N2        &as N3          &as N4                        &as N5                                       &as N6       &as N7                         &as N8           &as N9         &as N0              &as MINUS
 &kp ESC     &as Q   &as W         &as E           &as R                         &as T                                        &as Y        &as U                          &as I            &as O          &as P               &as RIGHT_BRACKET
@@ -287,39 +302,31 @@
                 <&inc_dec_kp DOWN_ARROW UP_ARROW>,
                 <&inc_dec_kp RIGHT LEFT>;
 
-            label = "Base";
         };
 
         NAV {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
+            label = "Navigation";
             bindings = <
-&none          &kp N6     &kp N7        &kp N8         &kp N9                        &kp N0                                 &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &kp LG(BACKSPACE)
-&kp ESC        &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)                     &kp LG(T)                              &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp DEL
-&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT                     &kp LG(F)                              &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp RIGHT_ALT      &kp RIGHT_GUI
+&none          &kp N6     &kp N7        &kp N8         &kp N9                        &kp N0                                 &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &none
+&kp ESC        &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)                     &kp LG(T)                              &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(BACKSPACE)
+&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT                     &kp LG(F)                              &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp LG(K)          &kp LG(L)
 &kp LS(LC(Q))  &kp LG(Z)  &kp LG(X)     &kp LG(C)      &kp LG(V)                     &kp LG(B)  &trans       &trans         &kp SPACE              &kp LG(M)                                  &kp LG(C)         &kp LG(V)         &kp RG(Z)          &kp ENTER
-                          &kp K_MUTE    &kp LS(LG(A))  &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE  &kp ENTER    &kp BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
+                          &kp K_MUTE    &kp LS(LG(M))  &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE  &kp ENTER    &kp BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LA(LS(DOWN)) LA(LS(UP))>,
+                <&inc_dec_kp LA(LS(DOWN)) LA(LS(UP))>, 
                 <&inc_dec_kp LA(LS(RIGHT)) LA(LS(LEFT))>;
 
-            label = "Navigation";
         };
 
         NUM {
             label = "Numpad";
             bindings = <
-&kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                    &kp F6         &kp F7      &kp F8     &kp F9      &kp F10    &kp F11
-&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                                &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL  &kp LBKT
-&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LS(NUHS)                              &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp DOT    &kp NON_US_HASH
-&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)    &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH   &kp ENTER
+&kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                    &kp F6         &kp F7      &kp F8     &kp F9      &kp F10         &kp F11
+&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                                &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL       &kp LBKT
+&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &kp LS(NUHS)                              &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)   &kp NON_US_HASH
+&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)    &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH        &kp ENTER
                         &kp F2      &kp F4      &kp TAB     &kp SPACE     &kp ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
             >;
 
