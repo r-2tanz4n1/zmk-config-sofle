@@ -235,8 +235,8 @@
             layers = <0>;
         };
 
-        Fn3Left {
-            bindings = <&mo 3>;
+        Hyper_Left {
+            bindings = <&kp LS(LA(LC(LEFT_GUI)))>;
             key-positions = <53 54>;
             layers = <0>;
         };
@@ -251,6 +251,19 @@
             bindings = <&soff>;
             key-positions = <30 18 44>;
         };
+
+        TogNumpad_On {
+            bindings = <&to 2>;
+            key-positions = <56 57>;
+            layers = <0>;
+        };
+
+        TogNumpad_Off {
+            bindings = <&to 0>;
+            key-positions = <56 57>;
+            layers = <2>;
+        };
+
     };
 
     keymap {
@@ -260,9 +273,9 @@
             bindings = <
 &none       AS(N1)      AS(N2)       AS(N3)       AS(N4)        AS(N5)                                                 AS(N6)  AS(N7)       AS(N8)      AS(N9)       AS(N0)          &none
 &kp ESC     AS(Q)       AS(W)        AS(E)        AS(R)         AS(T)                                                  AS(Y)   AS(U)        AS(I)       AS(O)        AS(P)           AS(RIGHT_BRACKET)
-AS(MINUS)   &hm LCTRL A &hm LALT S   &hm LGUI D   &hm LSHFT F   AS(G)                                                  AS(H)   &hm RSHFT J  &hm RGUI K  &hm RALT L   &hm RCTRL SEMI  AS(SQT)
+AS(MINUS)   &hm LCTRL A &hm LALT S   &hm LGUI D   AS(F)         AS(G)                                                  AS(H)   &hm RSHFT J  &hm RGUI K  &hm RALT L   &hm RCTRL SEMI  AS(SQT)
 &caps_word  AS(Z)       AS(X)        AS(C)        AS(V)         AS(B)       &none                          &none       AS(N)   AS(M)        AS(COMMA)   AS(DOT)      AS(SLASH)       &mt RSHFT ENTER
-                      &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LS(LA(LC(LEFT_GUI))) TAB  &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
+                      &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LSHIFT TAB  &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
             >;
 
             sensor-bindings = 
