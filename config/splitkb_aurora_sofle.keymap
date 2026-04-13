@@ -267,8 +267,8 @@
             layers = <0>;
         };
 
-        Fn3Left {
-            bindings = <&mo 3>;
+        Hyper_Left {
+            bindings = <&kp LS(LA(LC(LEFT_GUI)))>;
             key-positions = <53 54>;
             layers = <0>;
         };
@@ -303,11 +303,11 @@
         BASE {
             label = "Base";
             bindings = <
-&none       &as N1  &as N2        &as N3          &as N4                      &as N5                                       &as N6       &as N7                         &as N8           &as N9         &as N0              &as MINUS
-&kp ESC     &as Q   &as W         &as E           &as R                       &as T                                        &as Y        &as U                          &as I            &as O          &as P               &as RIGHT_BRACKET
-&as MINUS   &as A   &as S         &as D           &mt LS(LC(LA(LEFT_GUI))) F  &as G                                        &as H        &as J                          &as K            &as L          &mt RIGHT_ALT SEMI  &as SQT
-&caps_word  &as Z   &as X         &as C           &as V                       &as B        &none          &none            &as N        &as M                          &as COMMA        &as PERIOD     &as SLASH           &kp ENTER
-                    &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LEFT_SHIFT TAB          &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
+&none       &as N1  &as N2        &as N3          &as N4              &as N5                                       &as N6       &as N7                         &as N8           &as N9         &as N0              &as MINUS
+&kp ESC     &as Q   &as W         &as E           &as R               &as T                                        &as Y        &as U                          &as I            &as O          &as P               &as RIGHT_BRACKET
+&as MINUS   &as A   &as S         &as D           &as F               &as G                                        &as H        &as J                          &as K            &as L          &mt RIGHT_ALT SEMI  &as SQT
+&caps_word  &as Z   &as X         &as C           &as V               &as B        &none          &none            &as N        &as M                          &as COMMA        &as PERIOD     &as SLASH           &kp ENTER
+                    &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
             >;
 
             sensor-bindings =
