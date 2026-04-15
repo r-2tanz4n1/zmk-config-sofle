@@ -303,11 +303,11 @@
         BASE {
             label = "Base";
             bindings = <
-&none       &as N1  &as N2        &as N3          &as N4              &as N5                                       &as N6       &as N7                         &as N8           &as N9         &as N0              &as MINUS
-&kp ESC     &as Q   &as W         &as E           &as R               &as T                                        &as Y        &as U                          &as I            &as O          &as P               &as RIGHT_BRACKET
-&as MINUS   &as A   &as S         &as D           &as F               &as G                                        &as H        &as J                          &as K            &as L          &mt RIGHT_ALT SEMI  &as SQT
-&caps_word  &as Z   &as X         &as C           &as V               &as B        &none          &none            &as N        &as M                          &as COMMA        &as PERIOD     &as SLASH           &kp ENTER
-                    &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
+&none       &as N1  &as N2        &as N3          &as N4                        &as N5                                       &as N6       &as N7                         &as N8           &as N9         &as N0              &as MINUS
+&kp ESC     &as Q   &as W         &as E           &as R                         &as T                                        &as Y        &as U                          &as I            &as O          &as P               &as RIGHT_BRACKET
+&as MINUS   &as A   &as S         &as D           &as F                         &as G                                        &as H        &as J                          &as K            &as L          &mt RIGHT_ALT SEMI  &as SQT
+&caps_word  &as Z   &as X         &as C           &as V                         &as B        &none          &none            &as N        &as M                          &as COMMA        &as PERIOD     &as SLASH           &kp ENTER
+                    &kp C_VOL_DN  &lt 3 C_VOL_UP  &mt LA(LC(LS(LEFT_GUI))) TAB  &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
             >;
 
             sensor-bindings =
@@ -318,11 +318,11 @@
         NAV {
             label = "Navigation";
             bindings = <
-&none          &kp N6     &kp N7        &kp N8         &kp N9                 &kp N0                                 &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &none
-&kp LC(LS(Q))  &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)              &kp LG(T)                              &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(BACKSPACE)
-&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LA(LC(LG(LSHFT)))  &kp LG(F)                              &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp LG(K)          &kp LG(L)
-&kp CAPSLOCK   &kp LG(Z)  &kp LG(X)     &kp LG(C)      &kp LG(V)              &kp LG(B)  &trans       &trans         &kp SPACE              &kp LG(M)                                  &kp LG(C)         &kp LG(V)         &kp RG(Z)          &kp ENTER
-                          &kp K_MUTE    &kp LS(LG(M))  &mt LEFT_SHIFT TAB     &kp SPACE  &kp ENTER    &kp BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
+&none          &kp N6     &kp N7        &kp N8         &kp N9                        &kp N0                                   &kp N1                 &kp N2                                     &kp N3            &kp N4            &kp N5             &none
+&kp LC(LS(Q))  &kp LG(Q)  &kp LG(W)     &kp LG(S)      &kp LG(R)                     &kp LG(T)                                &kp LG(T)              &kp LG(I)                                  &kp UP            &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))  &kp LG(BACKSPACE)
+&kp LG(A)      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI   &kp LEFT_SHIFT                &kp LG(F)                                &kp LS(LA(LC(LG(H))))  &kp LEFT                                   &kp DOWN          &kp RIGHT         &kp LG(K)          &kp LG(L)
+&kp CAPSLOCK   &kp LG(Z)  &kp LG(X)     &kp LG(C)      &kp LG(V)                     &kp LG(B)  &trans       &trans           &kp SPACE              &kp LG(M)                                  &kp LG(C)         &kp LG(V)         &kp RG(Z)          &kp ENTER
+                          &kp K_MUTE    &kp LS(LG(M))  &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE  &lt 3 RET    &lt 3 BACKSPACE  &kp SPACE              &mt LC(LS(LA(LEFT_GUI))) LC(LS(UP_ARROW))  &kp LC(LS(DOWN))  &kp LG(H)
             >;
 
             sensor-bindings =
@@ -333,11 +333,11 @@
         NUM {
             label = "Numpad";
             bindings = <
-&kp F12     &kp F1      &kp F2      &kp F3      &kp F4                 &kp F5                                    &kp F6         &kp F7      &kp F8     &kp F9      &kp F10        &kp F11
-&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)             &kp LS(N5)                                &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL      &kp LBKT
-&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LA(LC(LG(LSHFT)))  &kp LS(NUHS)                              &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)  &kp NON_US_HASH
-&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)             &kp LS(N0)    &trans       &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH       &kp ENTER
-                        &kp F2      &kp F4      &mt LEFT_SHIFT TAB     &kp SPACE     &kp ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
+&kp F12     &kp F1      &kp F2      &kp F3      &kp F4                        &kp F5                                               &kp F6         &kp F7      &kp F8     &kp F9      &kp F10        &kp F11
+&kp ESC     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)                    &kp LS(N5)                                           &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL      &kp LBKT
+&kp LA(N2)  &kp LCTRL   &kp LALT    &kp LGUI    &kp LEFT_SHIFT                &kp LS(NUHS)                                         &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)  &kp NON_US_HASH
+&kp NUBS    &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)                    &kp LS(N0)    &trans                  &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH       &mt RIGHT_SHIFT ENTER
+                        &kp F2      &kp F4      &mt LS(LA(LC(LEFT_GUI))) TAB  &kp SPACE     &mt LEFT_COMMAND RET    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
             >;
 
             sensor-bindings =
