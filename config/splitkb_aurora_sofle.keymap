@@ -267,7 +267,7 @@
             bindings = <
 &none       AS(N1)      AS(N2)       AS(N3)       AS(N4)        AS(N5)                                                 AS(N6)  AS(N7)       AS(N8)      AS(N9)       AS(N0)          &none
 &kp TAB     AS(Q)       AS(W)        AS(E)        AS(R)         AS(T)                                                  AS(Y)   AS(U)        AS(I)       AS(O)        AS(P)           AS(RIGHT_BRACKET)
-&kp ESC     &hm LCTRL A &hm LALT S   &hm LGUI D   &hm LSHFT F   AS(G)                                                  AS(H)   &hm RSHFT J  &hm RGUI K  &hm RALT L   &hm RCTRL SEMI  AS(SQT)
+&hm LCTRL ESC  AS(A)    &hm LALT S   &hm LGUI D   &hm LSHFT F   AS(G)                                                  AS(H)   &hm RSHFT J  &hm RGUI K  &hm RALT L   &hm RCTRL SEMI  AS(SQT)
 &caps_word  AS(Z)       AS(X)        AS(C)        AS(V)         AS(B)       &none                          &none       AS(N)   AS(M)        AS(COMMA)   AS(DOT)      AS(SLASH)       &kp ENTER
                    &kp C_VOL_DN  &lt 3 C_VOL_UP  &kp LA(LC(LS(LEFT_GUI))) &lt 1 SPACE  &lt 2 ENTER    &lt 2 BACKSPACE  &lt 1 SPACE  &mt RS(RC(RA(RIGHT_GUI))) DEL  &lt 3 C_BRI_INC  &kp C_BRI_DEC
             >;
