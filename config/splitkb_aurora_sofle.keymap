@@ -304,9 +304,9 @@
             bindings = <
 &kp F12               &kp F1      &kp F2      &kp F3      &kp F4                       &kp F5                                         &kp F6         &kp F7      &kp F8     &kp F9      &kp F10        &kp F11
 &kp TAB               &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)                   &kp LS(N5)                                     &kp LS(N7)     &kp N7      &kp N8     &kp N9      &kp EQUAL      &kp LBKT
-&mt LEFT_CONTROL ESC  &kp LA(N2)  &kp LALT    &kp LGUI    &kp LEFT_SHIFT               &kp LS(NUHS)                                   &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)  &kp NON_US_HASH
+&mt LEFT_CONTROL ESC  &kp LA(N2)  &kp LA(N3)  &kp LGUI    &kp LEFT_SHIFT               &kp LS(NUHS)                                   &kp LS(EQUAL)  &kp N4      &kp N5     &kp N6      &kp LA(EQUAL)  &kp NON_US_HASH
 &kp CAPS              &kp LS(N6)  &kp LA(N3)  &kp LS(N8)  &kp LS(N9)                   &kp LS(N0)    &trans            &trans         &kp N0         &kp N1      &kp N2     &kp N3      &kp FSLH       &mt RIGHT_SHIFT ENTER
-                                  &kp NUBS    &kp F4      &mt LS(LA(LC(LEFT_GUI))) F2  &kp SPACE     &mt LGUI ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
+                                  &kp NUBS    &kp F4      &mt LEFT_ALT F2  &kp SPACE     &mt LGUI ENTER    &kp BACKSPACE  &kp SPACE      &kp LS(N0)  &kp COMMA  &kp PERIOD
             >;
 
             sensor-bindings =
